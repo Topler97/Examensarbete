@@ -5,12 +5,13 @@ const app = express();
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
+.then(() => {
     console.log('Connected to MongoDB');
-  })
-  .catch((err) => {
+})
+.catch((err) => {
     console.error('Failed to connect to MongoDB', err);
-  });
+});
+ 
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
