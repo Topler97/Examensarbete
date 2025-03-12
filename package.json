@@ -2,6 +2,7 @@
   "name": "examensarbete",
   "version": "1.0.1",
   "description": "",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,10 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config();
+import express from "express";
+import mongoose from 'mongoose';
 const app = express();
 app.use(express.json());
+import { createProduct } from "./lib/routes/ProductRoutes.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -12,6 +14,8 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     console.error('Failed to connect to MongoDB', err);
   });
 const port = process.env.PORT || 3000
+
+app.use('/', createProduct);
 
 app.listen(port, () => {
     console.log(`listen to ${port}`)
