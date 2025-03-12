@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 //import { createProduct } from "./lib/routes/ProductRoutes.js";
 import RecipeRoute from "./lib/route/RecipeRoute.js"; // Rätt import
+import ExtraRoute from "./lib/route/ExtraRoute.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -19,6 +20,7 @@ const port = process.env.PORT || 3000;
 
 //app.use("/", createProduct);
 app.use("/", RecipeRoute);
+app.use("/", ExtraRoute);
 
 app.listen(port, () => {
   console.log(`listen to ${port}`);
