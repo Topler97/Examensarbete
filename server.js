@@ -2,9 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 const app = express();
 app.use(express.json());
-//import { createProduct } from "./lib/routes/ProductRoutes.js";
 import RecipeRoute from "./lib/route/RecipeRoute.js"; // Rätt import
 import ExtraRoute from "./lib/route/ExtraRoute.js";
+import ProductRoutes from "./lib/routes/ProductRoutes.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,9 +18,9 @@ mongoose
   });
 const port = process.env.PORT || 3000;
 
-//app.use("/", createProduct);
 app.use("/", RecipeRoute);
 app.use("/", ExtraRoute);
+app.use('/', ProductRoutes);
 
 app.listen(port, () => {
   console.log(`listen to ${port}`);
