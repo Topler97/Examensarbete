@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from 'mongoose';
 const app = express();
 app.use(express.json());
-import { createProduct } from "./lib/routes/ProductRoutes.js";
+import ProductRoutes from "./lib/routes/ProductRoutes.js";
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI)
   });
 const port = process.env.PORT || 3000
 
-app.use('/', createProduct);
+app.use('/', ProductRoutes);
 
 app.listen(port, () => {
     console.log(`listen to ${port}`)
