@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "custom-desktop": "1280px",
+      },
       fontFamily: {
         sans: [`poppins`, `inter`, `sans-serif`],
       },
