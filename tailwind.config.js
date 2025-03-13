@@ -4,7 +4,11 @@ module.exports = {
       './components/**/*.{js,ts,jsx,tsx}', // Lägg till om du har komponenter
     ],
     theme: {
-      extend: {},
+      extend: {
+        maxWidth: {
+          "custom-desktop": '1280px'
+        }
+      },
     },
     plugins: [],
 }
