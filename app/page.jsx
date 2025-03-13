@@ -1,5 +1,14 @@
+
+import { Footer } from "./components/Footer"
+
 export default function Home() {
-  return <h1>Välkommen till Next.js!</h1>;
+  return (
+  <div>
+    <h1>Välkommen till Next.js!</h1>
+
+    <Footer/>
+  </div>
+)
 }
 
   
