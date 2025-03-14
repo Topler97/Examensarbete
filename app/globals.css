@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,7 +21,7 @@
         --p: 1rem;
         --span: 0.75rem;
         --h1: 36px;
-        --h2: 32px - 36px;
+        --h2: 32px;
         --h3: 28px;
         --h4: 24px;
 
