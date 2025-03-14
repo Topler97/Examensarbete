@@ -39,6 +39,8 @@
 }
 
 nav {
+   background-color: #5B3636;
+   font-family: var(--font-primary);;
     transition: all 0.3s ease-in-out;
   }
   
@@ -47,10 +49,14 @@ nav {
   }
   
   nav ul li:hover {
-    color: #ffeb3b;
+    color: #666;
   }
   
 
+  .overlay {
+    background-color: var(--primary);
+    
+}
 
 
 
