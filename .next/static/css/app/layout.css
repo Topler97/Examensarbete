@@ -15,11 +15,8 @@
     --spacing: 0.25rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-<<<<<<< HEAD
-    --radius-xl: 0.75rem;
-=======
     --font-weight-bold: 700;
->>>>>>> julia/footer
+    --radius-xl: 0.75rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -235,16 +232,11 @@
       max-width: 96rem;
     }
   }
-<<<<<<< HEAD
-  .m-20 {
-    margin: calc(var(--spacing) * 20);
-=======
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
->>>>>>> julia/footer
   }
   .block {
     display: block;
@@ -291,10 +283,6 @@
   .resize {
     resize: both;
   }
-<<<<<<< HEAD
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-=======
   .flex-col {
     flex-direction: column;
   }
@@ -303,7 +291,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
->>>>>>> julia/footer
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -326,13 +316,12 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-<<<<<<< HEAD
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-=======
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
@@ -344,23 +333,20 @@
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
->>>>>>> julia/footer
   }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-<<<<<<< HEAD
-  .text-\[16px\] {
-    font-size: 16px;
-=======
   .text-\[12px\] {
     font-size: 12px;
+  }
+  .text-\[16px\] {
+    font-size: 16px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
->>>>>>> julia/footer
   }
   .text-white {
     color: var(--color-white);
@@ -404,15 +390,6 @@
   .\[xlink\:href\] {
     xlink: href;
   }
-<<<<<<< HEAD
-  .hover\:bg-\[\#8B6060\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #8B6060;
-      }
-    }
-  }
-=======
   .md\:container {
     @media (width >= 48rem) {
       width: 100%;
@@ -438,11 +415,6 @@
       margin: auto;
     }
   }
-  .md\:mt-10 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 10);
-    }
-  }
   .md\:mt-12 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 12);
@@ -453,29 +425,9 @@
       margin-right: calc(var(--spacing) * 12);
     }
   }
-  .md\:mr-14 {
-    @media (width >= 48rem) {
-      margin-right: calc(var(--spacing) * 14);
-    }
-  }
-  .md\:mr-15 {
-    @media (width >= 48rem) {
-      margin-right: calc(var(--spacing) * 15);
-    }
-  }
-  .md\:mr-20 {
-    @media (width >= 48rem) {
-      margin-right: calc(var(--spacing) * 20);
-    }
-  }
   .md\:ml-20 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
     }
   }
   .md\:flex {
@@ -488,39 +440,9 @@
       display: none;
     }
   }
-  .md\:w-1\/2 {
-    @media (width >= 48rem) {
-      width: calc(1/2 * 100%);
-    }
-  }
-  .md\:w-2\/3 {
-    @media (width >= 48rem) {
-      width: calc(2/3 * 100%);
-    }
-  }
-  .md\:w-3\/5 {
-    @media (width >= 48rem) {
-      width: calc(3/5 * 100%);
-    }
-  }
-  .md\:w-20 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:w-70 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 70);
-    }
-  }
   .md\:justify-between {
     @media (width >= 48rem) {
       justify-content: space-between;
-    }
-  }
-  .md\:justify-center {
-    @media (width >= 48rem) {
-      justify-content: center;
     }
   }
   .md\:justify-start {
@@ -528,34 +450,9 @@
       justify-content: flex-start;
     }
   }
-  .md\:gap-20 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:py-2 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-  }
-  .md\:py-3 {
-    @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 3);
-    }
-  }
-  .md\:pt-5 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 5);
-    }
-  }
   .md\:pt-6 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 6);
-    }
-  }
-  .md\:pt-8 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 8);
     }
   }
   .md\:pb-4 {
@@ -563,17 +460,11 @@
       padding-bottom: calc(var(--spacing) * 4);
     }
   }
-  .md\:text-center {
-    @media (width >= 48rem) {
-      text-align: center;
-    }
-  }
   .md\:text-\[14px\] {
     @media (width >= 48rem) {
       font-size: 14px;
     }
   }
->>>>>>> julia/footer
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
