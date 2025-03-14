@@ -178,7 +178,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("324a079adf2dd288")
+=======
+/******/ 		__webpack_require__.h = () => ("cb41961b56e0d7f7")
+>>>>>>> julia/footer
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

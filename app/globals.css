@@ -14,7 +14,7 @@
        --heading-color: #333;
        --body-color: #666;
        --font-primary: 'Poppins', sans-serif;
-       --font-secondery: 'Inter', sans-serif;
+       --font-secondary: 'Inter', sans-serif;
 
         /** Sizes **/
 
@@ -24,23 +24,26 @@
         --h2: 32px;
         --h3: 28px;
         --h4: 24px;
-
-
-
     }
 }
 
 @layer base{
-    body{
-        font-family: var(--font-primary);
-
-        
+    h1 h2 h3 h4{
+        font-family: var(--font-primary); 
+    }
+    p a span div {
+        font-size: var(--p);
+        font-family: var(--font-secondary);
     }
 }
 
+.bg-primary {
+    background-color: var(--primary);
+}
+.bg-secondary {
+    background-color: var(--secondary);
+}
 
-
-
-
-
-
+.container {
+    max-width: 1300px;
+}
