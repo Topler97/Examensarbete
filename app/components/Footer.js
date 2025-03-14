@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../public/Logo.png";
 
 export const Footer = () => {
     return(
@@ -8,7 +7,12 @@ export const Footer = () => {
                 <div className="md:flex">
                     <section className="py-10">
                         <div className="flex justify-center md:justify-start">
-                            <Image src={Logo} alt="footer logo"/>
+                            <Image 
+                                src="/Logo.png" 
+                                alt="footer logo"
+                                width={170}
+                                height={170}
+                            />
                         </div>
                         <h2 className="flex justify-center font-bold pt-4 md:justify-start md:pt-6 md:pb-4">Välkommen till Favoritdrinkar</h2>
                         <span className="hidden md:flex md:text-[14px]">Utforska våra bästa drinkrecept och lär dig blanda som ett proffs - enkelt, roligt och alltid med smak.</span>
