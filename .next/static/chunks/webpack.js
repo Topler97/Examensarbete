@@ -190,15 +190,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("eeb35f4b34c70da4")
-=======
-/******/ 		__webpack_require__.h = () => ("b676a7e39fb0f9cf")
->>>>>>> Amanda-/-add-nav
-=======
-/******/ 		__webpack_require__.h = () => ("8213e223215d54e5")
->>>>>>> julia/hero
+/******/ 		__webpack_require__.h = () => ("08f537cf7e046368")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

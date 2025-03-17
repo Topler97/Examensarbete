@@ -17,18 +17,13 @@
     --container-6xl: 72rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-<<<<<<< HEAD
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --font-weight-bold: 700;
-    --radius-xl: 0.75rem;
-=======
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-semibold: 600;
->>>>>>> Amanda-/-add-nav
+    --font-weight-bold: 700;
+    --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -212,27 +207,24 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   .inset-1 {
     inset: calc(var(--spacing) * 1);
   }
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
->>>>>>> Amanda-/-add-nav
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
   .top-16 {
     top: calc(var(--spacing) * 16);
   }
+  .top-\[200px\] {
+    top: 200px;
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-<<<<<<< HEAD
-=======
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
@@ -248,15 +240,8 @@
   .right-7 {
     right: calc(var(--spacing) * 7);
   }
->>>>>>> Amanda-/-add-nav
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .z-50 {
-    z-index: 50;
-=======
-  .top-\[200px\] {
-    top: 200px;
   }
   .left-5 {
     left: calc(var(--spacing) * 5);
@@ -266,7 +251,9 @@
   }
   .z-20 {
     z-index: 20;
->>>>>>> julia/hero
+  }
+  .z-50 {
+    z-index: 50;
   }
   .\!container {
     width: 100% !important;
@@ -304,24 +291,18 @@
       max-width: 96rem;
     }
   }
-<<<<<<< HEAD
   .mx-auto {
     margin-inline: auto;
   }
-<<<<<<< HEAD
-=======
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
->>>>>>> julia/hero
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
-=======
->>>>>>> Amanda-/-add-nav
   .block {
     display: block;
   }
@@ -346,32 +327,24 @@
   .table {
     display: table;
   }
-<<<<<<< HEAD
+  .h-\[350px\] {
+    height: 350px;
+  }
   .h-full {
     height: 100%;
   }
-<<<<<<< HEAD
-=======
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
->>>>>>> Amanda-/-add-nav
   .w-80 {
     width: calc(var(--spacing) * 80);
-=======
-  .h-\[350px\] {
-    height: 350px;
->>>>>>> julia/hero
   }
   .w-full {
     width: 100%;
   }
-<<<<<<< HEAD
   .w-max {
     width: max-content;
   }
-=======
->>>>>>> Amanda-/-add-nav
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
@@ -412,16 +385,14 @@
   .justify-center {
     justify-content: center;
   }
-<<<<<<< HEAD
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-=======
   .justify-end {
     justify-content: flex-end;
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
->>>>>>> Amanda-/-add-nav
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -437,8 +408,6 @@
       margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-<<<<<<< HEAD
-=======
   .space-y-8 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -446,7 +415,6 @@
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
->>>>>>> Amanda-/-add-nav
   .space-x-6 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -454,19 +422,16 @@
       margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
-<<<<<<< HEAD
-  .rounded-xl {
-    border-radius: var(--radius-xl);
-=======
   .self-end {
     align-self: flex-end;
->>>>>>> Amanda-/-add-nav
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-<<<<<<< HEAD
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -474,10 +439,9 @@
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-=======
+  }
   .bg-\[\#5B3636\] {
     background-color: #5B3636;
->>>>>>> Amanda-/-add-nav
   }
   .bg-black {
     background-color: var(--color-black);
@@ -491,20 +455,14 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-<<<<<<< HEAD
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-<<<<<<< HEAD
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-=======
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
->>>>>>> julia/hero
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -527,15 +485,10 @@
   .text-center {
     text-align: center;
   }
-=======
-  .text-center {
-    text-align: center;
-  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
->>>>>>> Amanda-/-add-nav
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -544,7 +497,6 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
-<<<<<<< HEAD
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -557,11 +509,10 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-=======
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
->>>>>>> Amanda-/-add-nav
   }
   .text-white {
     color: var(--color-white);
@@ -621,15 +572,11 @@
   .\[xlink\:href\] {
     xlink: href;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   .md\:top-\[120px\] {
     @media (width >= 48rem) {
       top: 120px;
     }
   }
->>>>>>> julia/hero
   .md\:container {
     @media (width >= 48rem) {
       width: 100%;
@@ -720,18 +667,6 @@
       font-size: 14px;
     }
   }
-<<<<<<< HEAD
-=======
->>>>>>> Amanda-/-add-nav
-  .lg\:flex {
-    @media (width >= 64rem) {
-      display: flex;
-    }
-  }
-  .lg\:hidden {
-    @media (width >= 64rem) {
-      display: none;
-=======
   .md\:text-\[18px\] {
     @media (width >= 48rem) {
       font-size: 18px;
@@ -747,6 +682,16 @@
       top: 450px;
     }
   }
+  .lg\:flex {
+    @media (width >= 64rem) {
+      display: flex;
+    }
+  }
+  .lg\:hidden {
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
   .lg\:text-\[40px\] {
     @media (width >= 64rem) {
       font-size: 40px;
@@ -755,7 +700,6 @@
   .xl\:top-\[150px\] {
     @media (width >= 80rem) {
       top: 150px;
->>>>>>> julia/hero
     }
   }
 }
@@ -779,19 +723,13 @@
   }
 }
 @layer base {
-  p a div {
+  h1 h2 h3 h4 {
+    font-family: var(--font-primary);
+  }
+  p a span div {
     font-size: var(--p);
     font-family: var(--font-secondary);
   }
-  span {
-    font-size: var(--span);
-  }
-  h1 {
-    font-size: var(--h1);
-  }
-}
-.font-primary {
-  font-family: var(--font-primary);
 }
 .bg-primary {
   background-color: var(--primary);
@@ -801,21 +739,6 @@
 }
 .container {
   max-width: 1300px;
-}
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
 }
 nav {
   background-color: #5B3636;
@@ -1034,11 +957,9 @@ nav ul li:hover {
   syntax: "*";
   inherits: false;
 }
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> Amanda-/-add-nav
+

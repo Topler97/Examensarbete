@@ -125,15 +125,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("7f328628af6100ae")
-=======
-/******/ 		__webpack_require__.h = () => ("c924838a608805c8")
->>>>>>> Amanda-/-add-nav
-=======
-/******/ 		__webpack_require__.h = () => ("cdeb2d2ad3b492ab")
->>>>>>> julia/hero
+/******/ 		__webpack_require__.h = () => ("0b2038f69fede198")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
