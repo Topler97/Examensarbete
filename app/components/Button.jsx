@@ -6,7 +6,7 @@ export const Button = ({ buttonText, onClick, buttonColor }) => {
             style={{
                 backgroundColor: buttonColor, 
             }}
-            className="text-white rounded-xl py-2 px-4 text-[16px] cursor-pointer"
+            className="text-white rounded-xl py-2 px-10 text-[16px] cursor-pointer"
         >
             {buttonText}
         </button>
