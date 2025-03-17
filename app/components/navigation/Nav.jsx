@@ -45,47 +45,55 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* 🔹 Overlay & Mobilmeny */}
-      {isOpen && (
-        <div className="fixed inset-0 overlay z-50 flex justify-end">
-          {/* 🔹 Menyn */}
-          <div className=" w-64 h-full p-6 flex flex-col gap-4 transition-transform duration-300 ease-in-out transform translate-x-0">
-            {/* 🔹 Stäng-knapp */}
-            <button className="self-end" onClick={() => setIsOpen(false)}>
-              <Image src="/close.svg" alt="Stäng meny" width={30} height={30} />
-            </button>
+    
+       {/* 🔹 Overlay & Mobilmeny */}
+{isOpen && (
+  <div className="fixed inset-0 overlay z-50 flex justify-center items-center">
+    {/* 🔹 Menyn */}
+    <div className="w-80 h-full p-6 flex flex-col transition-transform duration-300 ease-in-out transform translate-x-0">
+      
+      {/* 🔹 Stäng-knapp (håller sig i övre högra hörnet) */}
+      <div className="absolute top-6 right-0">
+        <button onClick={() => setIsOpen(false)}>
+          <Image src="/close.svg" alt="Stäng meny" width={30} height={30} />
+        </button>
+      </div>
 
-            {/* 🔹 Menylänkar */}
-            <ul className="text-lg text-white">
-              <li>
-                <Link href="/products" onClick={() => setIsOpen(false)}>
-                  Våra produkter
-                </Link>
-              </li>
-              <li>
-                <Link href="/ranking" onClick={() => setIsOpen(false)}>
-                  Topplistan
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" onClick={() => setIsOpen(false)}>
-                  Nyheter
-                </Link>
-              </li>
-              <li>
-                <Link href="/extra" onClick={() => setIsOpen(false)}>
-                  Tillbehör
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" onClick={() => setIsOpen(false)}>
-                  Om oss
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+      {/* 🔹 Wrapper för länkar (centreras både vertikalt & horisontellt) */}
+      <div className="flex flex-col items-center justify-center flex-grow">
+        <ul className="text-lg text-white space-y-6 text-center">
+          <li>
+            <Link href="/products" onClick={() => setIsOpen(false)}>
+              Våra produkter
+            </Link>
+          </li>
+          <li>
+            <Link href="/ranking" onClick={() => setIsOpen(false)}>
+              Topplistan
+            </Link>
+          </li>
+          <li>
+            <Link href="/news" onClick={() => setIsOpen(false)}>
+              Nyheter
+            </Link>
+          </li>
+          <li>
+            <Link href="/extra" onClick={() => setIsOpen(false)}>
+              Tillbehör
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" onClick={() => setIsOpen(false)}>
+              Om oss
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </nav>
   );
 }
