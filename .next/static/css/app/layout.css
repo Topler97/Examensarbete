@@ -16,10 +16,18 @@
     --container-6xl: 72rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+<<<<<<< HEAD
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
+=======
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-semibold: 600;
+>>>>>>> Amanda-/-add-nav
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -203,6 +211,15 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+<<<<<<< HEAD
+=======
+  .inset-1 {
+    inset: calc(var(--spacing) * 1);
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+>>>>>>> Amanda-/-add-nav
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -212,6 +229,24 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+<<<<<<< HEAD
+=======
+  .right-2 {
+    right: calc(var(--spacing) * 2);
+  }
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+  .right-6 {
+    right: calc(var(--spacing) * 6);
+  }
+  .right-7 {
+    right: calc(var(--spacing) * 7);
+  }
+>>>>>>> Amanda-/-add-nav
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -257,12 +292,15 @@
   .mx-auto {
     margin-inline: auto;
   }
+<<<<<<< HEAD
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
+=======
+>>>>>>> Amanda-/-add-nav
   .block {
     display: block;
   }
@@ -290,15 +328,24 @@
   .h-full {
     height: 100%;
   }
+<<<<<<< HEAD
+=======
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
+>>>>>>> Amanda-/-add-nav
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
   .w-full {
     width: 100%;
   }
+<<<<<<< HEAD
   .w-max {
     width: max-content;
   }
+=======
+>>>>>>> Amanda-/-add-nav
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
@@ -339,8 +386,16 @@
   .justify-center {
     justify-content: center;
   }
+<<<<<<< HEAD
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+=======
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+>>>>>>> Amanda-/-add-nav
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -356,6 +411,16 @@
       margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+<<<<<<< HEAD
+=======
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+>>>>>>> Amanda-/-add-nav
   .space-x-6 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -363,13 +428,19 @@
       margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
+<<<<<<< HEAD
   .rounded-xl {
     border-radius: var(--radius-xl);
+=======
+  .self-end {
+    align-self: flex-end;
+>>>>>>> Amanda-/-add-nav
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+<<<<<<< HEAD
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -377,6 +448,10 @@
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+=======
+  .bg-\[\#5B3636\] {
+    background-color: #5B3636;
+>>>>>>> Amanda-/-add-nav
   }
   .bg-red-300 {
     background-color: var(--color-red-300);
@@ -390,6 +465,7 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+<<<<<<< HEAD
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -411,6 +487,15 @@
   .text-center {
     text-align: center;
   }
+=======
+  .text-center {
+    text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+>>>>>>> Amanda-/-add-nav
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -419,6 +504,7 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+<<<<<<< HEAD
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -428,6 +514,11 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+=======
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+>>>>>>> Amanda-/-add-nav
   }
   .text-white {
     color: var(--color-white);
@@ -484,6 +575,7 @@
   .\[xlink\:href\] {
     xlink: href;
   }
+<<<<<<< HEAD
   .md\:container {
     @media (width >= 48rem) {
       width: 100%;
@@ -559,6 +651,8 @@
       font-size: 14px;
     }
   }
+=======
+>>>>>>> Amanda-/-add-nav
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
@@ -606,6 +700,35 @@
 }
 .container {
   max-width: 1300px;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+nav {
+  background-color: #5B3636;
+  font-family: var(--font-primary);
+  transition: all 0.3s ease-in-out;
+}
+nav ul li {
+  transition: color 0.2s;
+}
+nav ul li:hover {
+  color: #666;
+}
+.overlay {
+  background-color: var(--primary);
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -810,3 +933,11 @@
   syntax: "*";
   inherits: false;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> Amanda-/-add-nav

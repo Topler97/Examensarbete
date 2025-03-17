@@ -47,3 +47,28 @@
 .container {
     max-width: 1300px;
 }
+
+nav {
+   background-color: #5B3636;
+   font-family: var(--font-primary);;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li {
+    transition: color 0.2s;
+  }
+  
+  nav ul li:hover {
+    color: #666;
+  }
+  
+
+  .overlay {
+    background-color: var(--primary);
+    
+}
+
+
+
+
+
