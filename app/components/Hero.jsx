@@ -66,12 +66,12 @@ export const Hero = () => {
 
             <div className="absolute inset-0 bg-black opacity-62 z-10"></div>
 
-            <div className="absolute inset-0 flex flex-col z-20 text-white px-6 pt-12 md:w-1/2 lg:top-[200px]">
+            <div className="md:ml-15 absolute inset-0 flex flex-col z-20 text-white px-6 pt-12 md:w-1/2 lg:top-[200px]">
                 <h1 className="text-[24px] font-bold font-primary pb-4 lg:text-[40px]">{heading}</h1>
                 <span className="md:text-[18px]">{description}</span>
             </div>
 
-            <div className="absolute inset-0 z-20 top-[200px] left-5 flex md:items-center md:top-[120px] lg:top-[450px] xl:top-[150px]">
+            <div className="md:ml-15 absolute inset-0 z-20 top-[200px] left-5 flex md:items-center md:top-[120px] lg:top-[450px] xl:top-[150px]">
                 {/* <div className="mr-4">
                     <Button 
                         buttonText={'Kontakt'}
