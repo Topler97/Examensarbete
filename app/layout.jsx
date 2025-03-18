@@ -1,7 +1,7 @@
 import './globals.css';
-import Navbar from "./components/navigation/Nav"; // Importera Navbar
-import {Footer} from './components/Footer';
-import {Hero} from './components/Hero';
+// import Navbar from "./components/navigation/Nav"; // Importera Navbar
+// import {Footer} from './components/Footer';
+// import {Hero} from './components/Hero';
 
 export const metadata = {
   title: 'Next.js',
@@ -12,10 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="sv">
       <body>
-        <Navbar /> 
+        {/* <Navbar />  */}
         {children}
-        <Hero/>
-        <Footer/>
+        {/* <Hero/>
+        <Footer/> */}
 
       </body>
     </html>
