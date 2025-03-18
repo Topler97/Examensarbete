@@ -4,7 +4,8 @@ const app = express();
 app.use(express.json());
 import RecipeRoute from "./lib/route/RecipeRoute.js"; // Rätt import
 import ExtraRoute from "./lib/route/ExtraRoute.js";
-import ProductRoutes from "./lib/routes/ProductRoutes.js";
+import NewsRoute from './lib/route/NewsRoute.js';
+import ProductRoute from './lib/route/ProductRoute.js';
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -20,7 +21,8 @@ const port = process.env.PORT || 3000;
 
 app.use("/", RecipeRoute);
 app.use("/", ExtraRoute);
-app.use('/', ProductRoutes);
+app.use("/", ProductRoute);
+app.use("/", NewsRoute);
 
 app.listen(port, () => {
   console.log(`listen to ${port}`);
