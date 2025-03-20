@@ -1,7 +1,32 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function ProductNews() {
+  const [news, setNews] = useState();
+  const [recipes, setRecipes] = useState();
+  
+  useEffect(() => {
+    const fetchNewsProducts = async () => {
+      const res = await fetch('/api/news');  // Gör ett fetch-anrop till API-routen
+      const newsData = await res.json();  // Omvandla svaret till JSON-format
+      setNews(newsData);  // Sätt produkterna i state
+      console.log(newsData, 'newsData')
+    };
+
+    fetchNewsProducts();  // Anropa fetchProducts när komponenten laddas
+
+    const fetchRecipesProducts = async () => {
+      const res = await fetch('/api/recipes');  // Gör ett fetch-anrop till API-routen
+      const recipesData = await res.json();  // Omvandla svaret till JSON-format
+      setRecipes(recipesData);  // Sätt produkterna i state
+      console.log(recipesData, 'recipesData')
+    };
+
+    fetchRecipesProducts(); 
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
       {/* Tillbaka-knapp, nu placerad i linje med kortet */}

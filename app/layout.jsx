@@ -5,6 +5,7 @@ import {Footer} from './components/Footer';
 import {Hero} from './components/Hero';
 import { ProductsComponent } from './components/Products';
 import { News } from './components/news/News';
+import ProductNews from './components/productnews/ProductNews';
 
 export const metadata = {
   title: 'Next.js',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         {children}
         <Hero/>
         
+        <ProductNews />
         <News />
         
         <ProductsComponent />
