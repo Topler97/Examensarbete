@@ -19,7 +19,6 @@ export const ProductsComponent = () => {
     console.log(products, 'products')
 
     return(
-<<<<<<< HEAD
         <section className="my-20 lg:flex lg:items-center lg:flex-col">
             {products.map((product) => {
                 return(
@@ -30,17 +29,6 @@ export const ProductsComponent = () => {
                             width={60}
                             height={60}
                         />
-=======
-        <section className="my-20 lg:flex lg:justify-center">
-            <div className="flex flex-col items-center mx-5 sm:flex-row lg:w-2/3">
-                <Image 
-                    src="/lynx.png"
-                    alt="vin"
-                    width={60}
-                    height={60}
-                    
-                />
->>>>>>> 365dd0b7986506e98f16dbda604e80bb5bff55d6
 
                         <div className="sm:flex sm:flex-col">
                             <h3 className="text-[#8B6060] font-bold text-[20px] py-3 text-center sm:text-start sm:mx-10">
