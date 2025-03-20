@@ -23,7 +23,7 @@ export default function ProductNews() {
       setRecipes(recipesData);
     };
 
-    fetchRecipes(); 
+    fetchRecipesProducts();
   }, []);
 
   return (

@@ -3,8 +3,6 @@ import Navbar from "./components/navigation/Nav";
 import {Footer} from './components/Footer';
 import {Hero} from './components/Hero';
 import { ProductsComponent } from './components/Products';
-import { News } from './components/news/News';
-import ProductNews from './components/productnews/ProductNews';
 
 export const metadata = {
   title: 'Dina favoritdrinkar',
@@ -19,8 +17,6 @@ export default function RootLayout({ children }) {
         {children}
         <Hero/>
         
-        <ProductNews />
-        <News />
         
         <ProductsComponent />
         <Footer/>
