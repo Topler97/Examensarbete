@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop-navigation */}
-        <div className="hidden lg:flex text-white text-lg items-center w-full">
+        <div className="hidden lg:flex text-white text-[16px] items-center w-full">
           <ul className="flex space-x-6 flex-1 justify-center">
             <li>
               <Link href="/products">Våra produkter</Link>
