@@ -11,7 +11,6 @@ export const ProductsComponent = () => {
           const res = await fetch('/api/products');
           const data = await res.json();
           setProducts(data);
-          console.log(data, 'fetch')
         };
 
         fetchProducts();
