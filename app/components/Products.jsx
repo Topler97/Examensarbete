@@ -25,6 +25,7 @@ export const ProductsComponent = () => {
                     alt="vin"
                     width={60}
                     height={60}
+                    
                 />
 
                 <div className="sm:flex sm:flex-col">
