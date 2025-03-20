@@ -17,12 +17,13 @@ export default function Navbar() {
             width={120}
             height={40}
             className="cursor-pointer"
+            style={{ width: "auto", height: "auto" }}
           />
         </Link>
 
         {/* Hamburgermenu */}
         <div className="lg:hidden" onClick={() => setIsOpen(true)}>
-          <Image src="/menu.svg" alt="Meny" width={30} height={30} />
+          <Image src="/menu.svg" alt="Meny" width={30} height={30} style={{ width: "auto", height: "auto" }}/>
         </div>
 
         {/* Desktop-navigation */}
