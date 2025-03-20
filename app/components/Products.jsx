@@ -16,13 +16,11 @@ export const ProductsComponent = () => {
         fetchProducts();
     }, []);
 
-    console.log(products, 'products')
-
     return(
         <section className="my-20 lg:flex lg:items-center lg:flex-col">
             {products.map((product) => {
                 return(
-                    <div key={product.key} className="flex flex-col items-center mx-5 sm:flex-row lg:w-2/3 border-b-2 border-[#F0F0F0] py-10">
+                    <div key={product.key} className="flex flex-col items-center mx-5 sm:flex-row border-b-2 border-[#F0F0F0] py-10 lg:w-2/3">
                         <Image 
                             src={product.imgUrl}
                             alt="vin"
@@ -45,11 +43,13 @@ export const ProductsComponent = () => {
                                 <p className="text-[#8B6060] pt-5 sm:p-0">{product.sort}</p>
                                 <p className="text-[#8B6060] pb-8 sm:p-0">{product.country}</p>
                             </div>
-                            
 
-                            <div className="flex justify-center sm:flex sm:flex-col sm:items-start sm:ml-10">
-                                <Button buttonText={'Läs mer'} buttonColor={'#8B6060'} />
-                            </div>
+                            {product.button && (
+                                <div className="flex justify-center sm:flex sm:flex-col sm:items-start sm:ml-10">
+                                    <Button buttonText={'Läs mer'} buttonColor={'#8B6060'} />
+                                </div>
+                            )}
+                            
                         </div>
                     </div>
                 )
