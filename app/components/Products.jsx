@@ -1,8 +1,22 @@
+'use client';
 import Image from "next/image"
 import { Button } from "./Button"
-
+import { useEffect, useState } from "react";
 
 export const ProductsComponent = () => {
+    const [products, setProducts] = useState();
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+          const res = await fetch('/api/products');  // Gör ett fetch-anrop till API-routen
+          const data = await res.json();  // Omvandla svaret till JSON-format
+          setProducts(data);  // Sätt produkterna i state
+          console.log(data, 'fetch')
+        };
+
+        fetchProducts();  // Anropa fetchProducts när komponenten laddas
+      }, []);
+
     return(
         <section className="my-20 lg:flex lg:justify-center">
             <div className="flex flex-col items-center mx-5 sm:flex-row lg:w-2/3">
