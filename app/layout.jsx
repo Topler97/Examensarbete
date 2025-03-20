@@ -1,11 +1,11 @@
 
 import './globals.css';
-import Navbar from "./components/navigation/Nav"; // Importera Navbar
-import {Footer} from './components/Footer';
-import {Hero} from './components/Hero';
-import { ProductsComponent } from './components/Products';
+// import Navbar from "./components/navigation/Nav"; // Importera Navbar
+// import {Footer} from './components/Footer';
+// import {Hero} from './components/Hero';
+// import { ProductsComponent } from './components/Products';
 import { News } from './components/news/News';
-import ProductNews from './components/productnews/ProductNews';
+// import ProductNews from './components/productnews/ProductNews';
 
 export const metadata = {
   title: 'Next.js',
@@ -16,15 +16,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="sv">
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Hero/>
+        {/* <Hero/> */}
         
-        <ProductNews />
+        {/* <ProductNews /> */}
         <News />
         
-        <ProductsComponent />
-        <Footer/>
+        {/* <ProductsComponent />
+        <Footer/> */}
       </body>
     </html>
   )
