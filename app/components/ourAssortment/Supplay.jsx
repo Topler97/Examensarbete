@@ -10,7 +10,7 @@ const categories = [
   { name: 'Cider', image: '/supply/cider.png', link: '/categories/cider' },
   { name: 'Alkoholfritt', image: '/supply/soda.png', link: '/categories/alkoholfritt' }
 ]
-export default function ImageGallery() {
+export default function ourAssortment() {
   return (
     <div className="p-6">
       <h1 className="text-4xl font-bold text-center mb-6">Utforska Våra Kategorier</h1>

@@ -1,7 +1,7 @@
 import { Button } from "../Button";
 import Image from 'next/image';
 
-const MyPineapple = () => {
+const callToActionProductComponent = () => {
   return (
     <div className="relative flex justify-center p-6">
       <div className="w-full h-64 overflow-hidden rounded-lg shadow-lg relative">
@@ -27,7 +27,7 @@ const MyPineapple = () => {
   );
 };
 
-export default MyPineapple;
+export default callToActionProductComponent;
 
 
 

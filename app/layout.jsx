@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
         {children}
         <Hero/>
         
-        
         <ProductsComponent />
         <Footer/>
       </body>
