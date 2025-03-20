@@ -4,18 +4,17 @@ import { Button } from "../Button"
 import { useState, useEffect } from "react";
 
 export const News = () => {
-
     const [news, setNews] = useState();
     
+    // Fetchar ut alla nyheter
     useEffect(() => {
-        const fetchProducts = async () => {
-            const res = await fetch('/api/news');  // Gör ett fetch-anrop till API-routen
-            const data = await res.json();  // Omvandla svaret till JSON-format
-            setNews(data);  // Sätt produkterna i state
-            console.log(data, 'news')
+        const fetchNews = async () => {
+            const res = await fetch('/api/news');
+            const data = await res.json();
+            setNews(data);
         };
 
-        fetchProducts();  // Anropa fetchProducts när komponenten laddas
+        fetchNews();
         }, []);
 
     return(

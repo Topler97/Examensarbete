@@ -13,7 +13,6 @@ const categories = [
 export default function ImageGallery() {
   return (
     <div className="p-6">
-      {/* H1 Titel */}
       <h1 className="text-4xl font-bold text-center mb-6">Utforska Våra Kategorier</h1>
 
       {/* Bildgalleri */}
@@ -21,7 +20,6 @@ export default function ImageGallery() {
         {categories.map((category, index) => (
           <Link key={index} href={category.link} className="relative group">
             <div className="w-full h-64 overflow-hidden rounded-lg shadow-lg relative">
-              {/* Bild */}
               <Image 
                 src={category.image} 
                 alt={category.name} 
@@ -29,9 +27,8 @@ export default function ImageGallery() {
                 objectFit="cover" 
                 className="transition-all duration-300 ease-in-out group-hover:brightness-50 group-hover:scale-105"
               />
-              {/* Overlay */}
               <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300"></div>
-              {/* Text (dold först, visas vid hover) */}
+              {/* Hover content */}
               <h3 className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 {category.name}
               </h3>

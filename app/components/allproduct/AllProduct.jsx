@@ -12,7 +12,7 @@ const MyPineapple = () => {
           objectFit="cover"
           className="transition-all duration-300 ease-in-out group-hover:brightness-50 group-hover:scale-105"
         />
-        {/* Mörk överlagring på bilden */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">

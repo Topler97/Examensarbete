@@ -1,5 +1,4 @@
 
-
 export const Instructions = () => {
     return(
         <section className="my-15 lg:mx-20">

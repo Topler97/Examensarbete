@@ -8,13 +8,13 @@ export const ProductsComponent = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
-          const res = await fetch('/api/products');  // Gör ett fetch-anrop till API-routen
-          const data = await res.json();  // Omvandla svaret till JSON-format
-          setProducts(data);  // Sätt produkterna i state
+          const res = await fetch('/api/products');
+          const data = await res.json();
+          setProducts(data);
           console.log(data, 'fetch')
         };
 
-        fetchProducts();  // Anropa fetchProducts när komponenten laddas
+        fetchProducts();
       }, []);
 
     return(

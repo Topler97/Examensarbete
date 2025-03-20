@@ -7,29 +7,27 @@ export default function ProductNews() {
   const [news, setNews] = useState();
   const [recipes, setRecipes] = useState();
   
+  // Fetchar ut både nyheter och recept
   useEffect(() => {
-    const fetchNewsProducts = async () => {
-      const res = await fetch('/api/news');  // Gör ett fetch-anrop till API-routen
-      const newsData = await res.json();  // Omvandla svaret till JSON-format
-      setNews(newsData);  // Sätt produkterna i state
-      console.log(newsData, 'newsData')
+    const fetchNews = async () => {
+      const res = await fetch('/api/news');
+      const newsData = await res.json();
+      setNews(newsData);
     };
 
-    fetchNewsProducts();  // Anropa fetchProducts när komponenten laddas
+    fetchNews();
 
-    const fetchRecipesProducts = async () => {
-      const res = await fetch('/api/recipes');  // Gör ett fetch-anrop till API-routen
-      const recipesData = await res.json();  // Omvandla svaret till JSON-format
-      setRecipes(recipesData);  // Sätt produkterna i state
-      console.log(recipesData, 'recipesData')
+    const fetchRecipes = async () => {
+      const res = await fetch('/api/recipes');
+      const recipesData = await res.json();
+      setRecipes(recipesData);
     };
 
-    fetchRecipesProducts(); 
+    fetchRecipes(); 
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      {/* Tillbaka-knapp, nu placerad i linje med kortet */}
       <div className="w-full max-w-5xl mb-4">
         <Link
           href="/news"
@@ -45,9 +43,7 @@ export default function ProductNews() {
         </Link>
       </div>
 
-      {/* Innehåll */}
       <div className="flex flex-col md:flex-row items-center max-w-5xl bg-white shadow-lg rounded-lg p-6">
-        {/* Bild (till vänster på desktop, längst ner på små skärmar) */}
         <div className="w-full md:w-1/2 order-2 md:order-1">
           <Image
             src="/sliders/suger.png" // Byt ut mot din faktiska bild
@@ -58,7 +54,6 @@ export default function ProductNews() {
           />
         </div>
 
-        {/* Info-text (till höger på desktop, först på små skärmar) */}
         <div className="w-full md:w-1/2 md:pr-6 order-1 md:order-2">
           <h2 className="text-2xl font-bold mb-2">
             Vi har fått in Rosévin i vårt sortiment
@@ -69,7 +64,7 @@ export default function ProductNews() {
             det blivit ett populärt val både för festliga tillfällen och
             avslappnade kvällar. Men vad gör rosévin så speciellt? Och vad bör
             man tänka på när man väljer en flaska? I denna artikel går vi
-            igenom allt du behöver veta om rosévin – från tillverkning och
+            igenom allt du behöver veta om rosévin - från tillverkning och
             smakprofiler till tips på hur du serverar det.
           </p>
           <h3 className="text-xl font-bold mt-4 mb-2">Vad är rosévin?</h3>

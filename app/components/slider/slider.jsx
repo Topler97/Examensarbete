@@ -37,7 +37,7 @@ export default function ImageSlider() {
           />
         </div>
         
-        {/* Aktiv bild (centrerad) */}
+        {/* Aktiv bild */}
         <div className="w-full md:w-1/2 transition-transform duration-500 ease-in-out relative flex justify-center" style={{ height: '300px' }}>
           <Image
             src={images[currentIndex]}
@@ -61,7 +61,6 @@ export default function ImageSlider() {
 
       </div>
 
-      {/* Navigation */}
       <button 
         onClick={prevSlide} 
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75">

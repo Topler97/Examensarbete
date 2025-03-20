@@ -10,7 +10,6 @@ export default function Navbar() {
   return (
     <nav className="p-4 relative">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* 🔹 Logotyp */}
         <Link href="/">
           <Image
             src="/logo.png"
@@ -21,14 +20,13 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* 🔹 Hamburgermeny-knapp */}
+        {/* Hamburgermenu */}
         <div className="lg:hidden" onClick={() => setIsOpen(true)}>
           <Image src="/menu.svg" alt="Meny" width={30} height={30} />
         </div>
 
-        {/* 🔹 Desktop-navigation */}
+        {/* Desktop-navigation */}
         <div className="hidden lg:flex text-white text-lg items-center w-full">
-          {/* 🔹 Wrapper för menyn (centreras) */}
           <ul className="flex space-x-6 flex-1 justify-center">
             <li>
               <Link href="/products">Våra produkter</Link>
@@ -47,7 +45,6 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* 🔹 Knapp till höger */}
           <div className="ml-auto">
             <Button
               buttonText="Kontakta oss"
@@ -58,11 +55,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Overlay & Mobilmeny */}
+      {/* 🔹 Overlay Mobilmeny */}
       {isOpen && (
         <div className="fixed inset-0 overlay z-50 flex justify-center items-center">
           <div className="w-80 h-full p-6 flex flex-col transition-transform duration-300 ease-in-out transform translate-x-0">
-            {/* 🔹 Stäng-knapp */}
+            {/* Stäng-knapp */}
             <div className="absolute top-6 right-0">
               <button onClick={() => setIsOpen(false)}>
                 <Image
@@ -74,7 +71,6 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* 🔹 Wrapper för länkar */}
             <div className="flex flex-col items-center justify-center flex-grow">
               <ul className="text-lg text-white space-y-6 text-center">
                 <li>
@@ -102,7 +98,6 @@ export default function Navbar() {
                     Om oss
                   </Link>
                 </li>
-                {/* 🔹 Button som en li i mobilmenyn */}
                 <li>
                   <Button
                     buttonText="Kontakta oss"
