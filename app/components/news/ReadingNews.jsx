@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router'; // Lägg till useRouter
+import { useRouter } from 'next/router';
+import { useSearchParams } from "next/navigation";
 
 export default function ReadingNews() {
   const [news, setNews] = useState(null);
@@ -12,7 +13,7 @@ export default function ReadingNews() {
 
   // Fetchar ut nyheter baserat på id
   useEffect(() => {
-    if (!id) return; // Vänta tills id är tillgängligt
+    if (!id) return;
 
     const fetchNews = async () => {
       const res = await fetch(`/api/news/${id}`); // API-anrop för att hämta den specifika nyheten

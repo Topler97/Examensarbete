@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react"; // ✅ Lägg till detta
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
 
