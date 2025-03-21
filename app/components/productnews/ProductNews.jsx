@@ -23,7 +23,7 @@ export default function ProductNews() {
       setRecipes(recipesData);
     };
 
-    fetchRecipesProducts();
+    fetchRecipes();
   }, []);
 
   return (
@@ -51,6 +51,7 @@ export default function ProductNews() {
             width={400}
             height={400}
             className="rounded-lg mx-auto"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
 
