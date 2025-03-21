@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function ProductNews() {
+export default function ReadingNews() {
   const [news, setNews] = useState();
-  const [recipes, setRecipes] = useState();
   
   // Fetchar ut både nyheter och recept
   useEffect(() => {
@@ -17,13 +16,6 @@ export default function ProductNews() {
 
     fetchNews();
 
-    const fetchRecipes = async () => {
-      const res = await fetch('/api/recipes');
-      const recipesData = await res.json();
-      setRecipes(recipesData);
-    };
-
-    fetchRecipes();
   }, []);
 
   return (
