@@ -1,9 +1,18 @@
+'use client';
+
 import { Category } from "../components/Category";
 import { Hero } from "../components/Hero";
 import { ProductsComponent } from "../components/Products";
+import { useState } from "react";
 
 
 export default function ProductsPage() {
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    const handleSelectCategory = (category) => {
+        setSelectedCategory(category);
+    };
+
     return(
         <main>
             <Hero />
@@ -14,9 +23,9 @@ export default function ProductsPage() {
                 </p>
             </div>
 
-            <Category />
+            <Category onSelectCategory={handleSelectCategory} />
 
-            <ProductsComponent />
+            <ProductsComponent selectedCategory={selectedCategory} />
         </main>
     )
 }

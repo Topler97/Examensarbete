@@ -3,7 +3,7 @@ import Image from "next/image"
 import { Button } from "./Button"
 import { useEffect, useState } from "react";
 
-export const ProductsComponent = () => {
+export const ProductsComponent = ({ selectedCategory }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -16,9 +16,13 @@ export const ProductsComponent = () => {
         fetchProducts();
     }, []);
 
+    const filteredProducts = selectedCategory
+        ? products.filter(product => product.category === selectedCategory)
+        : products;
+
     return(
         <section className="my-20 lg:flex lg:items-center lg:flex-col">
-            {products.map((product) => {
+            {filteredProducts.map((product) => {
                 return(
                     <div key={product.key} className="flex flex-col items-center mx-5 sm:flex-row border-b-2 border-[#F0F0F0] py-10 lg:w-2/3">
                         <Image 
