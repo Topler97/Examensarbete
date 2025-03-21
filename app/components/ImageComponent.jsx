@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export const ImageComp = () => {
     return(
-        <section className="m-5 md:flex md:gap-8 lg:flex lg:justify-center lg:gap-10">
+        <section className="m-5 md:flex md:gap-8 lg:flex lg:justify-center lg:gap-10 lg:my-10">
             <Image 
                 src="/imgComp.png" 
                 alt="bild på ett vinförråd"

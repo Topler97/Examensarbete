@@ -1,7 +1,6 @@
 import './globals.css';
 import Navbar from "./components/navigation/Nav";
 import {Footer} from './components/Footer';
-import {Hero} from './components/Hero';
 
 export const metadata = {
   title: 'Dina favoritdrinkar',
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="sv">
       <body>
         <Navbar />
-        <Hero/>
         {children}
         <Footer/>
       </body>

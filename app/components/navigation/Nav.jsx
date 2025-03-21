@@ -33,13 +33,10 @@ export default function Navbar() {
               <Link href="/products">Våra produkter</Link>
             </li>
             <li>
-              <Link href="/ranking">Topplistan</Link>
+              <Link href="/toplist">Topplistan</Link>
             </li>
             <li>
               <Link href="/news">Nyheter</Link>
-            </li>
-            <li>
-              <Link href="/extra">Tillbehör</Link>
             </li>
             <li>
               <Link href="/about">Om oss</Link>

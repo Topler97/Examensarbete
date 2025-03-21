@@ -2,47 +2,46 @@
 
 import Image from "next/image";
 import { Button } from './Button';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export const Hero = () => {
-    const router = useRouter();
+    const pathname = usePathname();
+
+    if (!pathname) {
+        return null;
+    }
 
     const heroText = () => {
-        switch (router.pathname) {
-            case '/om-oss':
+        switch (pathname) {
+            case '/about':
                 return {
                     heading: 'Om oss',
                     description: 'Drinkexperterna som gör varje sipp minnesvärd.',
                 };
-            case '/kontakt':
+            case '/contact':
                 return {
                     heading: 'Kontakta oss',
                     description: 'Vi är här för att hjälpa dig! Om du har några frågor eller vill komma i kontakt med oss, skicka ett meddelande så svarar vi så snabbt vi kan.',
                 };
-            case '/nyheter':
+            case '/news':
                 return {
                     heading: 'Våra nyheter',
                     description: 'Vår nyhetssida är din go-to för att upptäcka de senaste drinktrenderna, nya recept och spännande uppdateringar från världen av cocktails och drycker. Håll dig uppdaterad med allt nytt!',
                 };
-            case '/topplistan':
+            case '/toplist':
                 return {
                     heading: 'Topplistan',
                     description: 'Vi är passionerade drinkälskare som strävar efter att ge dig de bästa recepten och inspirationen för alla tillfällen. Från enkla vardagsdrinkar till festliga cocktails - vårt mål är att göra din dryckesupplevelse både rolig och minnesvärd.',
                 };
-            case '/produkter':
+            case '/products':
                 return {
                     heading: 'Alla produkter',
                     description: 'Upptäck en värld av smaker med våra noggrant utvalda spritsorter och inspirerande drinkrecept. Oavsett om du är en erfaren bartender eller en nybörjare i drinkmixandets konst, har vi allt du behöver för att skapa minnesvärda stunder. Från klassiska favoriter till unika kreationer - här finns något för alla smaker och tillfällen.',
                 };
-            case '/recept':
+            case '/recipes':
                 return {
                     heading: 'Våra recept',
                     description: 'Välkommen till en värld av inspiration där vi samlat de bästa drinkrecepten för alla smaker och tillfällen. Oavsett om du vill skapa en festlig stämning med en uppfriskande cocktail eller njuta av en lugn kväll med en klassisk drink, har vi recepten som hjälper dig att lyfta varje ögonblick.',
-                };
-            case '/tillbehor':
-                return {
-                    heading: 'Våra tillbehör',
-                    description: 'För att skapa den perfekta drinken behövs mer än bara rätt ingredienser. Våra tillbehör är designade för att ge dig allt du behöver för att blanda, servera och njuta av dina favoritcocktails.',
                 };
             default:
                 return {

@@ -1,4 +1,5 @@
 import { Category } from "./components/Category";
+import { Hero } from "./components/Hero";
 import { ImageBoxTextBtn } from "./components/ImageBoxTextBtn";
 import ImageSlider from "./components/ImageSlider/slider";
 import OurAssortment from "./components/ourAssortment/Supplay";
@@ -7,6 +8,7 @@ import OurAssortment from "./components/ourAssortment/Supplay";
 export default function Home() {
   return (
     <main>
+        <Hero />
         <Category />
 
         <div className="flex flex-col items-center my-12 md:w-2/3 md:m-auto md:py-12">
