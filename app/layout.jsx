@@ -3,6 +3,7 @@ import Navbar from "./components/navigation/Nav";
 import {Footer} from './components/Footer';
 import {Hero} from './components/Hero';
 import { ProductsComponent } from './components/Products';
+import CallToAction from './components/calltoaction/Calltoaction';
 
 export const metadata = {
   title: 'Dina favoritdrinkar',
@@ -16,6 +17,10 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Hero/>
+
+        <div className='my-12'>
+        <CallToAction/>
+        </div>
         
         <ProductsComponent />
         <Footer/>
