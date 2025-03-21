@@ -5,8 +5,8 @@ export const ImageBoxTextBtn = () => {
     return(
         <section className="">
             {/* Mobile */}
-            <div className="md:hidden">
-                <div className="p-5">
+            <div className="md:hidden my-10">
+                <div className="p-5 pb-10">
                     <h2 className="font-bold text-[20px] text-[#333] pb-4">Vår resa - Från idéer till perfekta drinkar, vi älskar att dela vår passion</h2>
                     <p className="text-[#666] pb-4">
                     Vi är passionerade drinkälskare som strävar efter att ge dig de bästa recepten och inspirationen för alla tillfällen. Från enkla vardagsdrinkar till festliga cocktails - vårt mål är att göra din dryckesupplevelse både rolig och minnesvärd.
@@ -35,7 +35,7 @@ export const ImageBoxTextBtn = () => {
                 </div>
 
                 <div className="p-5 lg:flex lg:flex-col lg:justify-center">
-                    <h2 className="font-bold md:text-[20px] lg:text-[28px] text-[#333] pb-4">Vår resa - Från idéer till perfekta drinkar, vi älskar att dela vår passion</h2>
+                    <h2 className="font-bold md:text-[20px] lg:text-[26px] text-[#333] pb-4">Vår resa - Från idéer till perfekta drinkar, vi älskar att dela vår passion</h2>
                     <p className="text-[#666] pb-8">
                        Vi är passionerade drinkälskare som strävar efter att ge dig de bästa recepten och inspirationen för alla tillfällen. Från enkla vardagsdrinkar till festliga cocktails - vårt mål är att göra din dryckesupplevelse både rolig och minnesvärd.
                     </p>
