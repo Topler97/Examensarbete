@@ -12,6 +12,7 @@ export const Footer = () => {
                                 alt="footer logo"
                                 width={170}
                                 height={170}
+                                style={{ width: "auto", height: "auto" }}
                             />
                         </div>
                         <h2 className="flex justify-center font-bold pt-4 md:justify-start md:pt-6 md:pb-4">Välkommen till Favoritdrinkar</h2>
