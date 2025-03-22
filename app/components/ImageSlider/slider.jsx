@@ -23,7 +23,7 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="relative w-full max-w-full mx-auto py-8 overflow-hidden bg-[#F0F0F0]">
+    <div className="relative w-full max-w-full mx-auto py-8 overflow-hidden md:bg-[#F0F0F0]">
       <div className="flex items-center justify-center gap-2">
         
         {/* Föregående bild - endast synlig på större skärmar */}
