@@ -9,15 +9,14 @@ export default function Navbar() {
 
   return (
     <nav className="p-4 relative">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <div className="flex justify-between items-center lg:mx-18">
         <Link href="/">
           <Image
             src="/logo.png"
             alt="Logotyp"
-            width={120}
-            height={40}
-            className="cursor-pointer"
-            style={{ width: "auto", height: "auto" }}
+            width={200}
+            height={100}
+            className="cursor-pointer w-[130px] lg:w-[200px]"
           />
         </Link>
 
