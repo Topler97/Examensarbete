@@ -39,10 +39,10 @@ export default function ContactForm() {
               ></textarea>
             </div>
             <Button 
-          buttonText="Skicka"
-          buttonColor="#5B3636"
-          className="py-2 px-6"
-        />
+              buttonText="Skicka"
+              buttonColor="#5B3636"
+              className="py-2 px-6"
+            />
           </form>
         </div>
       </div>

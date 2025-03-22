@@ -47,6 +47,7 @@ export default function Navbar() {
               buttonText="Kontakta oss"
               buttonColor="#8B6060"
               className="py-2 px-6"
+              link="/contact"
             />
           </div>
         </div>
@@ -69,25 +70,20 @@ export default function Navbar() {
             </div>
 
             <div className="flex flex-col items-center justify-center flex-grow">
-              <ul className="text-lg text-white space-y-6 text-center">
+              <ul className="text-[16px] text-white space-y-6 text-center">
                 <li>
                   <Link href="/products" onClick={() => setIsOpen(false)}>
                     Våra produkter
                   </Link>
                 </li>
                 <li>
-                  <Link href="/ranking" onClick={() => setIsOpen(false)}>
+                  <Link href="/toplist" onClick={() => setIsOpen(false)}>
                     Topplistan
                   </Link>
                 </li>
                 <li>
                   <Link href="/news" onClick={() => setIsOpen(false)}>
                     Nyheter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/extra" onClick={() => setIsOpen(false)}>
-                    Tillbehör
                   </Link>
                 </li>
                 <li>
@@ -100,6 +96,7 @@ export default function Navbar() {
                     buttonText="Kontakta oss"
                     buttonColor="#5B3636"
                     className="py-2 px-6 text-lg"
+                    link="/contact"
                   />
                 </li>
               </ul>

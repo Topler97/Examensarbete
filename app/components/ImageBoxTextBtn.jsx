@@ -40,7 +40,11 @@ export const ImageBoxTextBtn = () => {
                        Vi är passionerade drinkälskare som strävar efter att ge dig de bästa recepten och inspirationen för alla tillfällen. Från enkla vardagsdrinkar till festliga cocktails - vårt mål är att göra din dryckesupplevelse både rolig och minnesvärd.
                     </p>
                     <div>
-                        <Button buttonText={'Läs mer om oss'} buttonColor={'#5B3636'}/>
+                        <Button 
+                            buttonText={'Läs mer om oss'} 
+                            buttonColor={'#5B3636'}
+                            link="/about"
+                        />
                     </div>
                 </div>
             </div>

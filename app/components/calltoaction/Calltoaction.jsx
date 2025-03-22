@@ -39,6 +39,7 @@ export default function CallToAction() {
             buttonText="Kontakta oss"
             buttonColor="#5B3636"
             className="py-2 px-6"
+            link="/contact"
           />
         </div>
       </div>

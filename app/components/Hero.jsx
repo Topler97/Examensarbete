@@ -75,6 +75,7 @@ export const Hero = () => {
                     <Button 
                         buttonText={'Våra produkter'}
                         buttonColor={'#5B3636'}
+                        link="/products"
                     />
                 </div>
             </div>

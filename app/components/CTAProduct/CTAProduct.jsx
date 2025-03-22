@@ -21,6 +21,7 @@ const CallToActionProductComponent = () => {
           buttonText="Se alla produkter"
           buttonColor="#8B6060"
           className="py-2 px-6"
+          link="/products"
         />
       </div>
     </div>

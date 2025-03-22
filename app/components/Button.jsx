@@ -1,8 +1,18 @@
+'use client';
 
-export const Button = ({ buttonText, onClick, buttonColor }) => {
+export const Button = ({ buttonText, onClick, buttonColor, link }) => {
+
+    const handleClick = () => {
+        if (link) {
+            window.location.href = link;
+        } else {
+            onClick();
+        }
+    };
+
     return (
         <button
-            onClick={onClick}
+            onClick={handleClick}
             style={{
                 backgroundColor: buttonColor 
             }}
