@@ -70,7 +70,7 @@ export const Hero = () => {
                 <span className="md:text-[18px]">{description}</span>
             </div>
 
-            <div className="xl:ml-15 absolute inset-0 z-20 top-[200px] left-5 flex xl:items-center md:top-[250px] lg:top-[450px] xl:top-[320px] sm:top-[150px]">
+            <div className="xl:ml-15 absolute inset-0 z-20 top-[230px] left-5 flex xl:items-center md:top-[250px] lg:top-[450px] xl:top-[320px] sm:top-[150px]">
                 <div>
                     <Button 
                         buttonText={'Våra produkter'}

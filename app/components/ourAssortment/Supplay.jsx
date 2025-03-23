@@ -12,14 +12,14 @@ const categories = [
 ]
 export default function OurAssortment() {
   return (
-    <div className="p-6">
-      <h1 className="text-4xl font-bold text-center mb-6">Utforska Våra Kategorier</h1>
+    <div className="lg:mx-15 lg:pb-12">
+      <h2 className="lg:text-[26px] text-[20px] font-bold mb-6 ml-5">Utforska våra kategorier</h2>
 
       {/* Bildgalleri */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {categories.map((category, index) => (
           <Link key={index} href={category.link} className="relative group">
-            <div className="w-full h-64 overflow-hidden rounded-lg shadow-lg relative">
+            <div className="mx-5 mb-5 h-64 overflow-hidden rounded-lg shadow-lg relative">
               <Image 
                 src={category.image} 
                 alt={category.name} 
