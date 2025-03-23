@@ -1,3 +1,4 @@
+'use client';
 import CallToAction from "../components/calltoaction/Calltoaction";
 import ContactForm from "../components/contactform/contactform";
 import { Hero } from "../components/Hero";
