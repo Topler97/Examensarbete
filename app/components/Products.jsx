@@ -28,8 +28,8 @@ export const ProductsComponent = ({ selectedCategory }) => {
                         <Image 
                             src={product.imgUrl}
                             alt="vin"
-                            width={60}
-                            height={60}
+                            width={80}
+                            height={80}
                         />
 
                         <div className="sm:flex sm:flex-col">
