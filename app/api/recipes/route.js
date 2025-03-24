@@ -1,9 +1,18 @@
-import { connectDB } from '../../../lib/db.js';
-import RecipeSchema from '../../../lib/models/RecipeSchema.js';
+import { NextResponse } from "next/server";
+import { connectDB } from "../../../lib/db";
+import Recipes from "../../../lib/models/RecipeSchema";
 
-// Connectar med databasen & hämtar alla recept
 export async function GET() {
-  await connectDB();
-  const recipes = await RecipeSchema.find();
-  return Response.json(recipes);
+  try {
+    await connectDB();
+
+    const recipes = await Recipes.find({});
+    return NextResponse.json(recipes, { status: 200 });
+  } catch (error) {
+    console.error("Misslyckades att hämta recepten:", error);
+    return NextResponse.json(
+      { error: "Misslyckades att hämta recepten" },
+      { status: 500 }
+    );
+  }
 }
