@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link"; // Importera Link
 import { useParams } from 'next/navigation'; // Importera useParams
 
 export default function ReadNews() {
@@ -30,13 +31,20 @@ export default function ReadNews() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
             <div className="max-w-5xl w-full">
-                {/* Tillbaka-knapp */}
-                <button 
-                    className="mb-4 bg-gray-300 px-4 py-2 rounded-md"
-                    onClick={() => router.push("/news")}
+            <Link 
+                    href="/news" 
+                    className="mb-4 flex items-center text-gray-600 hover:text-gray-900"
                 >
+                    {/* Pilen som en bild */}
+                    <Image
+                        src="/arrow/arrow.png" // Byt ut mot din pilbild
+                        alt="Tillbaka"
+                        width={20}
+                        height={20}
+                        className="mr-2" // Lägg till en margin för att separera pilen från texten
+                    />
                     Tillbaka
-                </button>
+                </Link>
 
                 {/* Nyhetsinnehåll */}
                 <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row">
@@ -47,8 +55,8 @@ export default function ReadNews() {
                             alt={news.title}
                             width={600}
                             height={400}
-                            className="rounded-lg w-full"
-                            style={{ width: "auto", height: "auto" }}
+                            className="rounded-lg w-full max-h-[500px] mx-auto"
+                            style={{ width: "auto" }}
                             priority
                         />
                     </div>

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
-import { useSearchParams } from "next/navigation";
 
 export default function ReadingNews() {
   const [news, setNews] = useState(null);
@@ -38,8 +37,7 @@ export default function ReadingNews() {
       <div className="w-full max-w-5xl mb-4">
         <Link
           href="/news"
-          className="flex items-center gap-2 text-gray-700 hover:text-gray-900"
-        >
+          className="flex items-center gap-2 text-gray-700 hover:text-gray-900">
           <Image
             src="/arrow/arrow.png" // Byt ut mot din faktiska bild
             alt="Tillbaka"
