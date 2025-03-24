@@ -1,7 +1,6 @@
 import { Hero } from "../components/Hero";
 import { News } from "../components/news/News";
 
-
 export default function NewsPage() {
     return(
         <main>

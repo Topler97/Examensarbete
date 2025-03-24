@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from "react"; 
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-
+import { Button } from "../Button";
 
 export const News = () => {
     const [news, setNews] = useState([]);
@@ -22,7 +22,7 @@ export const News = () => {
     }, []);
 
     return (
-        <section className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:mx-15 lg:mb-5">
             {news.length > 0 ? (
                 news.map((article) => (
                     <div key={article._id} className="bg-white shadow-md rounded-lg p-4">
@@ -38,17 +38,14 @@ export const News = () => {
                             
                             />
                         </div>
-
                        
-                        <h2 className="text-lg font-bold py-3">{article.title}</h2>
+                        <h2 className="text-lg py-3">{article.title}</h2>
 
-                       
-                        <button
-                            className="bg-[#5B3636] text-white py-2 px-4 rounded-md"
-                            onClick={() => router.push(`/news/${article._id}`)} 
-                        >
-                            Läs mer
-                        </button>
+                        <Button 
+                            buttonText={'Läs mer'}
+                            buttonColor={'#5B3636'}
+                            onClick={() => router.push(`/news/${article._id}`)}
+                        />
                     </div>
                 ))
             ) : (
