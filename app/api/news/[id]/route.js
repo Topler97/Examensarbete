@@ -1,27 +1,26 @@
-import { NextResponse } from "next/server";
+import { connectDB } from "../../../../lib/db";
+import News from "../../../../lib/models/NewsSchema"; // Se till att din Mongoose-model importeras korrekt
+import { NextResponse } from "next/server"; // Importera EN gång
 
-export async function GET(req) {
+export async function GET(req, { params }) {
+  await connectDB(); // Koppla till MongoDB
+
+  console.log("📌 Params i API:", params);
+
   try {
-    const url = new URL(req.url); // Hämta URL från begäran
-    const id = url.pathname.split("/")[4]; // Extrahera ID från URL-path
+    const news = await News.findById(params.id);
 
-    console.log(`🔍 Hämtar nyhet med ID: ${id}`);
-
-    const res = await fetch(`http://localhost:3000/news/${id}`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error(`Misslyckades att hämta nyhet, status: ${res.status}`);
+    if (!news) {
+      return NextResponse.json(
+        { error: "Nyhet hittades inte" },
+        { status: 404 }
+      );
     }
 
-    const news = await res.json();
+    console.log("✅ Hittad nyhet:", news);
     return NextResponse.json(news, { status: 200 });
   } catch (error) {
-    console.error("Fel vid hämtning av nyhet:", error);
-    return NextResponse.json(
-      { error: "Misslyckades att hämta nyhet" },
-      { status: 500 }
-    );
+    console.error("❌ Fel vid hämtning av nyhet:", error);
+    return NextResponse.json({ error: "Serverfel" }, { status: 500 });
   }
 }

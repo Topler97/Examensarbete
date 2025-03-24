@@ -8,6 +8,7 @@ export default function ReadNews() {
     const [news, setNews] = useState(null);
     const router = useRouter();
     const { id } = useParams(); // Använd useParams istället för props.params
+    console.log("📌 ID från useParams:", id);
 
     useEffect(() => {
         const fetchNews = async () => {

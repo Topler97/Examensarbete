@@ -16,7 +16,7 @@ export default function ReadingNews() {
     if (!id) return;
 
     const fetchNews = async () => {
-      const res = await fetch(`/api/news/${id}`); // API-anrop för att hämta den specifika nyheten
+      const res = await fetch(`/news/${id}`); // API-anrop för att hämta den specifika nyheten
       const newsData = await res.json();
       setNews(newsData);
       setLoading(false);
