@@ -1,31 +1,13 @@
 'use client';
 import Image from "next/image";
 import { Button } from './Button';
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export const ImageBoxTextBtn = () => {
-    
-    const [isMounted, setIsMounted] = useState(false); // State för att kontrollera när komponenten är monterad på klienten
-    const [isAboutPage, setIsAboutPage] = useState(false); // State för att kontrollera om vi är på /about-sidan
-    const router = useRouter();
+    const pathname = usePathname(); // Hämta den aktuella sökvägen
 
-    useEffect(() => {
-        setIsMounted(true); // Sätt isMounted till true när komponenten är monterad på klienten
-    }, []);
-
-    useEffect(() => {
-        if (isMounted && router.pathname === '/about') {
-            setIsAboutPage(true);
-        } else {
-            setIsAboutPage(false);
-        }
-    }, [isMounted, router.pathname]); // Kör när isMounted eller router.pathname ändras
-
-    // Om komponenten inte har monterats än (dvs på servern), rendera inget eller en fallback
-    if (!isMounted) {
-        return null; // Eller rendera en fallback om så önskas
-    }
+    // Kolla om vi är på /about-sidan
+    const isAboutPage = pathname === '/about';
 
     return(
         <section className="">
