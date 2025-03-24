@@ -1,7 +1,14 @@
+'use client';
 import Image from "next/image";
 import { Button } from './Button';
+import { usePathname } from "next/navigation";
 
 export const ImageBoxTextBtn = () => {
+    const pathname = usePathname(); // Hämta den aktuella sökvägen
+
+    // Kolla om vi är på /about-sidan
+    const isAboutPage = pathname === '/about';
+
     return(
         <section className="">
             {/* Mobile */}
@@ -39,13 +46,15 @@ export const ImageBoxTextBtn = () => {
                     <p className="text-[#666] pb-8">
                        Vi är passionerade drinkälskare som strävar efter att ge dig de bästa recepten och inspirationen för alla tillfällen. Från enkla vardagsdrinkar till festliga cocktails - vårt mål är att göra din dryckesupplevelse både rolig och minnesvärd.
                     </p>
-                    <div>
-                        <Button 
-                            buttonText={'Läs mer om oss'} 
-                            buttonColor={'#5B3636'}
-                            link="/about"
-                        />
-                    </div>
+                    {!isAboutPage && (
+                        <div>
+                            <Button 
+                                buttonText={'Läs mer om oss'} 
+                                buttonColor={'#5B3636'}
+                                link="/about"
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

@@ -1,3 +1,4 @@
+'use client';
 import { Category } from "./components/Category";
 import { Hero } from "./components/Hero";
 import { ImageBoxTextBtn } from "./components/ImageBoxTextBtn";
