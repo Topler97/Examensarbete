@@ -3,14 +3,14 @@
 // import { ImageBoxTextBtn } from "./components/ImageBoxTextBtn";
 // import ImageSlider from "./components/ImageSlider/slider";
 // import OurAssortment from "./components/ourAssortment/Supplay";
-import Recipes from "./components/recipes/Recipes"
+import { ProductsComponent } from "./components/Products"
 
 
 export default function Home() {
   return (
     <main>
 
-          <Recipes />
+          <ProductsComponent />
 
         {/* <Hero />
         <Category />
