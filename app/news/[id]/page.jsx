@@ -2,19 +2,19 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link"; // Importera Link
-import { useParams } from 'next/navigation'; // Importera useParams
+import Link from "next/link"; 
+import { useParams } from 'next/navigation'; 
 
 export default function ReadNews() {
     const [news, setNews] = useState(null);
     const router = useRouter();
-    const { id } = useParams(); // Använd useParams istället för props.params
+    const { id } = useParams(); 
     console.log("📌 ID från useParams:", id);
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const res = await fetch(`/api/news/${id}`); // Hämta nyheten med ID
+                const res = await fetch(`/api/news/${id}`); 
                 if (!res.ok) throw new Error("Kunde inte hämta nyheten");
                 const data = await res.json();
                 setNews(data);
@@ -23,7 +23,7 @@ export default function ReadNews() {
             }
         };
 
-        if (id) fetchNews(); // Hämta endast om ID finns
+        if (id) fetchNews(); 
     }, [id]);
 
     if (!news) return <p>Laddar...</p>;
@@ -35,20 +35,20 @@ export default function ReadNews() {
                     href="/news" 
                     className="mb-4 flex items-center text-gray-600 hover:text-gray-900"
                 >
-                    {/* Pilen som en bild */}
+                   
                     <Image
-                        src="/arrow/arrow.png" // Byt ut mot din pilbild
+                        src="/arrow/arrow.png" 
                         alt="Tillbaka"
                         width={20}
                         height={20}
-                        className="mr-2" // Lägg till en margin för att separera pilen från texten
+                        className="mr-2" 
                     />
                     Tillbaka
                 </Link>
 
-                {/* Nyhetsinnehåll */}
+               
                 <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row">
-                    {/* Bild */}
+                   
                     <div className="md:w-1/2">
                         <Image
                             src={news.imgUrl || "/default-image.jpg"}
@@ -61,7 +61,7 @@ export default function ReadNews() {
                         />
                     </div>
 
-                    {/* Text */}
+                    
                     <div className="md:w-1/2 md:pl-6">
                         <h2 className="text-2xl font-bold">{news.title}</h2>
                         <p className="text-gray-600 mt-2">{news.description}</p>

@@ -1,9 +1,9 @@
 import { connectDB } from "../../../../lib/db";
-import News from "../../../../lib/models/NewsSchema"; // Se till att din Mongoose-model importeras korrekt
-import { NextResponse } from "next/server"; // Importera EN gång
+import News from "../../../../lib/models/NewsSchema";
+import { NextResponse } from "next/server";
 
 export async function GET(req, { params }) {
-  await connectDB(); // Koppla till MongoDB
+  await connectDB();
 
   console.log("📌 Params i API:", params);
 

@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
-import { connectDB } from "../../../lib/db"; // ✅ Importera rätt namn
-import News from "../../../lib/models/NewsSchema"; // Se till att modellen importeras rätt
+import { connectDB } from "../../../lib/db";
+import News from "../../../lib/models/NewsSchema";
 
-// Hämta alla nyheter
 export async function GET() {
   try {
-    await connectDB(); // ✅ Se till att databasen är ansluten
+    await connectDB();
 
     const news = await News.find({});
     return NextResponse.json(news, { status: 200 });

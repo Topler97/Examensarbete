@@ -8,28 +8,28 @@ export default function ReadingNews() {
   const [news, setNews] = useState(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const { id } = router.query; // Använd `router.query.id` för att hämta id från URL
+  const { id } = router.query; 
 
-  // Fetchar ut nyheter baserat på id
+  
   useEffect(() => {
     if (!id) return;
 
     const fetchNews = async () => {
-      const res = await fetch(`/news/${id}`); // API-anrop för att hämta den specifika nyheten
+      const res = await fetch(`/news/${id}`); 
       const newsData = await res.json();
       setNews(newsData);
       setLoading(false);
     };
 
     fetchNews();
-  }, [id]); // Kör useEffect när id ändras
+  }, [id]); 
 
   if (loading) {
-    return <div>Loading...</div>; // Visa en loading-indikator
+    return <div>Loading...</div>; 
   }
 
   if (!news) {
-    return <div>Nyheten kunde inte hittas.</div>; // Hantera om ingen nyhet finns
+    return <div>Nyheten kunde inte hittas.</div>; 
   }
 
   return (
@@ -39,7 +39,7 @@ export default function ReadingNews() {
           href="/news"
           className="flex items-center gap-2 text-gray-700 hover:text-gray-900">
           <Image
-            src="/arrow/arrow.png" // Byt ut mot din faktiska bild
+            src="/arrow/arrow.png" 
             alt="Tillbaka"
             width={20}
             height={20}
@@ -51,7 +51,7 @@ export default function ReadingNews() {
       <div className="flex flex-col md:flex-row items-center max-w-5xl bg-white shadow-lg rounded-lg p-6">
         <div className="w-full md:w-1/2 order-2 md:order-1">
           <Image
-            src={news.image || "/sliders/suger.png"} // Använd nyhetens bild eller en default-bild
+            src={news.image || "/sliders/suger.png"} 
             alt={news.title}
             width={400}
             height={400}
