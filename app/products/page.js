@@ -23,6 +23,10 @@ export default function ProductsPage() {
     fetchProducts();
   }, []);
 
+  const filteredProducts = selectedCategory
+        ? products.filter(product => product.category === selectedCategory)
+        : products;
+
   return (
     <main>
       <Hero />
@@ -41,10 +45,9 @@ export default function ProductsPage() {
 
       <Category onSelectCategory={handleSelectCategory} />
 
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductsComponent
-        key={product.title}
-          selectedCategory={selectedCategory}
+          key={product.title}
           imgUrl={product.imgUrl}
           title={product.title}
           description={product.description}
