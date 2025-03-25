@@ -1,21 +1,24 @@
-'use client';
+"use client";
 
-import { Category } from '../components/Category';
-import { Hero } from '../components/Hero';
-import { ProductsComponent } from '../components/Products';
-import { useState, useEffect } from 'react';
+import { Category } from "../components/Category";
+import { Hero } from "../components/Hero";
+import { ProductsComponent } from "../components/Products";
+import { useState, useEffect } from "react";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 5; // Antal produkter per sida
 
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
+    setCurrentPage(1); // Återställ sidan när kategori ändras
   };
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch('/api/products');
+      const res = await fetch("/api/products");
       const data = await res.json();
       setProducts(data);
     };
@@ -23,9 +26,20 @@ export default function ProductsPage() {
     fetchProducts();
   }, []);
 
+  // Filtrera produkter baserat på kategori
   const filteredProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory)
-        : products;
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
+
+  // Beräkna pagineringens start och slutindex
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
+  const changePage = (newPage) => {
+    setCurrentPage(newPage);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scrolla uppåt vid sidbyte
+  };
 
   return (
     <main>
@@ -45,17 +59,38 @@ export default function ProductsPage() {
 
       <Category onSelectCategory={handleSelectCategory} />
 
-      {filteredProducts.map((product) => (
+      {paginatedProducts.map((product) => (
         <ProductsComponent
           key={product.title}
           imgUrl={product.imgUrl}
           title={product.title}
           description={product.description}
-          sort={product.sortProducts}
+          sortProducts={product.sortProducts}
           country={product.country}
           button={product.button}
         />
       ))}
+
+      {/* Paginering */}
+      <div className="flex justify-center mt-5">
+        <button
+          className="px-4 py-2 mx-2 bg-[#8B6060] text-white rounded disabled:opacity-50"
+          onClick={() => changePage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Föregående
+        </button>
+
+        <span className="px-4 py-2">{currentPage}</span>
+
+        <button
+          className="px-4 py-2 mx-2 bg-[#8B6060] text-white rounded disabled:opacity-50"
+          onClick={() => changePage(currentPage + 1)}
+          disabled={endIndex >= filteredProducts.length}
+        >
+          Nästa
+        </button>
+      </div>
     </main>
   );
 }

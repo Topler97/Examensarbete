@@ -10,6 +10,7 @@ export const ProductsComponent = ({
   country,
   button,
 }) => {
+    
 
   return (
     <section className="my-20 lg:flex lg:items-center lg:flex-col">
