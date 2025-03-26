@@ -4,12 +4,12 @@ import { Hero } from './components/Hero';
 import { ImageBoxTextBtn } from './components/ImageBoxTextBtn';
 import ImageSlider from './components/ImageSlider/slider';
 import OurAssortment from './components/ourAssortment/Supplay';
-import { ProductsComponent } from './components/Products';
+
 
 export default function Home() {
   return (
     <main>
-      <ProductsComponent />
+      
 
       <Hero />
       <Category />
