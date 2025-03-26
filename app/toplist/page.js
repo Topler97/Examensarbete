@@ -23,6 +23,15 @@ export default function TopList() {
     return(
         <main>
             <Hero />
+
+            <div className="flex flex-col items-center my-12 md:w-2/3 md:m-auto md:pt-12">
+                <h2 className="text-[20px] font-bold text-[#333] pb-3 md:text-[26px] text-center">
+                    Topplistan: Våra och era absoluta favoriter!
+                </h2>
+                <p className="text-[#666] mx-5 text-center">
+                    Vill du lyxa till det med ett glas vin eller imponera med en välgjord drink? Vi har valt ut de mest smakrika, eleganta och trendiga alternativen för alla tillfällen. Oavsett om du föredrar något fruktigt, friskt eller fylligt, finns något här för dig!
+                </p>
+            </div>
             
             {randomProducts.map((product) => (
                 <ProductsComponent
