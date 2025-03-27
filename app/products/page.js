@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Category } from '../components/Category';
-import { Hero } from '../components/Hero';
-import { ProductsComponent } from '../components/Products';
-import { useState, useEffect } from 'react';
+import { Category } from "../components/Category";
+import { Hero } from "../components/Hero";
+import { ProductsComponent } from "../components/Products";
+import { useState, useEffect } from "react";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -15,7 +15,7 @@ export default function ProductsPage() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch('/api/products');
+      const res = await fetch("/api/products");
       const data = await res.json();
       setProducts(data);
     };
@@ -24,8 +24,8 @@ export default function ProductsPage() {
   }, []);
 
   const filteredProducts = selectedCategory
-        ? products.filter(product => product.category === selectedCategory)
-        : products;
+    ? products.filter((product) => product.category === selectedCategory)
+    : products;
 
   return (
     <main>
@@ -47,13 +47,14 @@ export default function ProductsPage() {
 
       {filteredProducts.map((product) => (
         <ProductsComponent
-          key={product.title}
+          key={product._id}
           imgUrl={product.imgUrl}
           title={product.title}
           description={product.description}
           sort={product.sortProducts}
           country={product.country}
           button={product.button}
+          id={product._id}
         />
       ))}
     </main>

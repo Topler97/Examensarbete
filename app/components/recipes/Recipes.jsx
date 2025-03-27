@@ -7,6 +7,8 @@ import Image from "next/image";
 export const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
     const router = useRouter(); 
+   
+
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
