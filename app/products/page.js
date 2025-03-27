@@ -4,31 +4,44 @@ import { Category } from "../components/Category";
 import { Hero } from "../components/Hero";
 import { ProductsComponent } from "../components/Products";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // Importera från 'next/navigation'
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5; // Antal produkter per sida
+  const router = useRouter();
 
-  const handleSelectCategory = (category) => {
-    setSelectedCategory(category);
-    setCurrentPage(1); // Återställ sidan när kategori ändras
-  };
+  // För att säkerställa att router.query fungerar på klientsidan
+  const { category } = router.query || {}; // Säkerställ att query inte är undefined
 
+  // Hämta alla produkter från API
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await fetch("/api/products");
+      let url = "/api/products"; // Grund-URL för att hämta produkter
+      if (category) {
+        url = `/api/products?category=${category}`; // Filtrera produkter baserat på kategori
+      }
+
+      const res = await fetch(url);
       const data = await res.json();
       setProducts(data);
     };
 
-    fetchProducts();
-  }, []);
+    fetchProducts(); // Hämta produkter när kategori ändras eller när sidan laddas
+  }, [category]); // När category ändras, hämta nya produkter
 
-  // Filtrera produkter baserat på kategori
-  const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory)
+  // Funktion som hanterar kategori-selektion
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // Återställ sidan när kategori ändras
+    router.push(`/products/${category}`); // Uppdatera URL:en med den valda kategorin
+  };
+
+  // Filtrera produkter baserat på kategori (om en kategori är vald)
+  const filteredProducts = category
+    ? products.filter((product) => product.category === category)
     : products;
 
   // Beräkna pagineringens start och slutindex
@@ -57,8 +70,9 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      <Category onSelectCategory={handleSelectCategory} />
+      <Category onSelectCategory={handleSelectCategory} /> {/* Kategoriväljare */}
 
+      {/* Rendera filtrerade produkter */}
       {paginatedProducts.map((product) => (
         <ProductsComponent
           key={product.title}

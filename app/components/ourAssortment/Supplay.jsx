@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const categories = [
-  { name: 'Vin', image: '/supply/vin.png', link: '/categories/vin' },
-  { name: 'Drinkar', image: '/supply/drinkar.png', link: '/categories/drinkar' },
-  { name: 'Öl', image: '/supply/öl.png', link: '/categories/ol' },
-  { name: 'Shots', image: '/supply/shots.png', link: '/categories/shots' },
-  { name: 'Cider', image: '/supply/cider.png', link: '/categories/cider' },
-  { name: 'Alkoholfritt', image: '/supply/soda.png', link: '/categories/alkoholfritt' }
+  { name: 'Vin', image: '/supply/vin.png', link: '/products/Vin' },
+  { name: 'Drinkar', image: '/supply/drinkar.png', link: '/products/Drinkar' },
+  { name: 'Öl', image: '/supply/öl.png', link: '/products/Öl' },
+  { name: 'Shots', image: '/supply/shots.png', link: '/products/Shots' },
+  { name: 'Cider', image: '/supply/cider.png', link: '/products/Cider' },
+  { name: 'Alkoholfritt', image: '/supply/soda.png', link: '/products/Alkoholfritt' }
 ]
 export default function OurAssortment() {
   return (
