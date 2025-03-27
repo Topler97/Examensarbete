@@ -4,11 +4,15 @@ import { usePathname } from "next/navigation";
 import { ProductsComponent } from "../../components/Products";
 import { Hero } from "../../components/Hero";
 import CallToActionProductComponent from "../../components/CTAProduct/CTAProduct";
+import { Category } from "../../components/Category";
+import { useRouter } from "next/navigation";
 
 export default function CategoryPage() {
   const [products, setProducts] = useState([]);
   const [isClient, setIsClient] = useState(false);
   const [category, setCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const router = useRouter();
   const pathname = usePathname();
 
   // Kontrollera om vi är på klientsidan
@@ -37,11 +41,16 @@ export default function CategoryPage() {
     }
   }, [category]);
 
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+    router.push(`/products/${category}`);
+  };
+
   return (
     <main>
         <Hero />
 
-        <div className="flex flex-col items-center my-12 md:w-2/3 md:m-auto md:pt-12">
+        <div className="flex flex-col items-center my-12 md:w-2/3 md:m-auto md:pt-12 pb-12">
             <h2 className="text-[20px] font-bold text-[#333] pb-3 md:text-[26px] text-center mx-4">
                 Utforska våra favoriter när det kommer till {category}!
             </h2>
@@ -53,6 +62,8 @@ export default function CategoryPage() {
                 hållbarhet för att säkerställa att du alltid får det bästa.
             </p>
         </div>
+
+        <Category onSelectCategory={handleSelectCategory} />
 
         {products.length > 0 ? (
             products.map((product) => (
