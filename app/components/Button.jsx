@@ -7,8 +7,8 @@ export const Button = ({ buttonText, onClick, buttonColor, link }) => {
     const handleClick = () => {
         if (link) {
             router.push(link); // Använd Next.js routing istället för window.location.href
-        } else if (onClick) {
-            onClick();
+        } else if (typeof onClick === "function") {
+            onClick(); // Kontrollera om onClick är en funktion innan du anropar den
         }
     };
 
@@ -24,4 +24,3 @@ export const Button = ({ buttonText, onClick, buttonColor, link }) => {
         </button>
     );
 };
-

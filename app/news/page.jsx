@@ -13,6 +13,7 @@ export default function NewsPage() {
         const res = await fetch('/api/news');
         const data = await res.json();
         setNews(data);
+        console.log(data)
       } catch (error) {
         console.error('Fel vid hämtning av nyheter:', error);
       }
