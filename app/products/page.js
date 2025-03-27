@@ -1,10 +1,9 @@
 "use client";
-
 import { Category } from "../components/Category";
 import { Hero } from "../components/Hero";
 import { ProductsComponent } from "../components/Products";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // Importera från 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -14,14 +13,14 @@ export default function ProductsPage() {
   const router = useRouter();
 
   // För att säkerställa att router.query fungerar på klientsidan
-  const { category } = router.query || {}; // Säkerställ att query inte är undefined
+  const { category } = router.query || {};
 
   // Hämta alla produkter från API
   useEffect(() => {
     const fetchProducts = async () => {
-      let url = "/api/products"; // Grund-URL för att hämta produkter
+      let url = "/api/products";
       if (category) {
-        url = `/api/products?category=${category}`; // Filtrera produkter baserat på kategori
+        url = `/api/products?category=${category}`;
       }
 
       const res = await fetch(url);
@@ -29,14 +28,14 @@ export default function ProductsPage() {
       setProducts(data);
     };
 
-    fetchProducts(); // Hämta produkter när kategori ändras eller när sidan laddas
-  }, [category]); // När category ändras, hämta nya produkter
+    fetchProducts();
+  }, [category]);
 
   // Funktion som hanterar kategori-selektion
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
-    setCurrentPage(1); // Återställ sidan när kategori ändras
-    router.push(`/products/${category}`); // Uppdatera URL:en med den valda kategorin
+    setCurrentPage(1);
+    router.push(`/products/${category}`);
   };
 
   // Filtrera produkter baserat på kategori (om en kategori är vald)
@@ -70,9 +69,8 @@ export default function ProductsPage() {
         </p>
       </div>
 
-      <Category onSelectCategory={handleSelectCategory} /> {/* Kategoriväljare */}
+      <Category onSelectCategory={handleSelectCategory} />
 
-      {/* Rendera filtrerade produkter */}
       {paginatedProducts.map((product) => (
         <ProductsComponent
           key={product.title}
