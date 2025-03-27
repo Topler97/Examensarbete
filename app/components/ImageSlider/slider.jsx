@@ -63,12 +63,12 @@ export default function ImageSlider() {
 
       <button 
         onClick={prevSlide} 
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75">
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer">
         ◀
       </button>
       <button 
         onClick={nextSlide} 
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75">
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 cursor-pointer">
         ▶
       </button>
     </div>

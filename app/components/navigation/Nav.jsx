@@ -22,7 +22,7 @@ export default function Navbar() {
 
         {/* Hamburgermenu */}
         <div className="lg:hidden" onClick={() => setIsOpen(true)}>
-          <Image src="/menu.svg" alt="Meny" width={30} height={30} style={{ width: "auto", height: "auto" }}/>
+          <Image src="/menu.svg" alt="Meny" width={30} height={30} style={{ width: "auto", height: "auto" }} className="cursor-pointer"/>
         </div>
 
         {/* Desktop-navigation */}
@@ -65,6 +65,7 @@ export default function Navbar() {
                   alt="Stäng meny"
                   width={30}
                   height={30}
+                  className="cursor-pointer"
                 />
               </button>
             </div>
