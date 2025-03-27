@@ -4,12 +4,22 @@ import { Hero } from './components/Hero';
 import { ImageBoxTextBtn } from './components/ImageBoxTextBtn';
 import ImageSlider from './components/ImageSlider/slider';
 import OurAssortment from './components/ourAssortment/Supplay';
+import { useRouter } from "next/navigation";
+import { useState } from 'react';
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const router = useRouter();
+
+  const handleSelectCategory = (category) => {
+    setSelectedCategory(category);
+    router.push(`/products/${category}`);
+  };
+
   return (
     <main>
       <Hero />
-      <Category />
+      <Category onSelectCategory={handleSelectCategory} />
 
       <div className="flex flex-col items-center my-12 md:w-2/3 md:m-auto md:py-12">
         <h2 className="text-[20px] font-bold text-[#333] pb-3 md:text-[26px]">
