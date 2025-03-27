@@ -1,5 +1,5 @@
-import { connectDB } from '../../../lib/db.js';
-import ProductSchema from '../../../lib/models/ProductSchema.js';
+import { connectDB } from "../../../lib/db.js";
+import ProductSchema from "../../../lib/models/ProductSchema.js";
 
 // Hanterar GET-förfrågningar och filtrerar produkter baserat på kategori
 export async function GET(req) {

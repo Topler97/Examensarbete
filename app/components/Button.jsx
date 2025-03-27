@@ -1,12 +1,14 @@
-'use client';
+"use client";
+import { useRouter } from "next/navigation";
 
 export const Button = ({ buttonText, onClick, buttonColor, link }) => {
+    const router = useRouter();
 
     const handleClick = () => {
         if (link) {
-            window.location.href = link;
-        } else {
-            onClick();
+            router.push(link); // Använd Next.js routing istället för window.location.href
+        } else if (typeof onClick === "function") {
+            onClick(); // Kontrollera om onClick är en funktion innan du anropar den
         }
     };
 
@@ -14,7 +16,7 @@ export const Button = ({ buttonText, onClick, buttonColor, link }) => {
         <button
             onClick={handleClick}
             style={{
-                backgroundColor: buttonColor 
+                backgroundColor: buttonColor,
             }}
             className="text-white rounded-xl py-2 px-10 text-[16px] cursor-pointer"
         >

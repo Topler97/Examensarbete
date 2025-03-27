@@ -1,4 +1,5 @@
 "use client";
+
 import { Category } from "../components/Category";
 import { Hero } from "../components/Hero";
 import { ProductsComponent } from "../components/Products";
@@ -22,7 +23,6 @@ export default function ProductsPage() {
       if (category) {
         url = `/api/products?category=${category}`;
       }
-
       const res = await fetch(url);
       const data = await res.json();
       setProducts(data);
@@ -73,13 +73,14 @@ export default function ProductsPage() {
 
       {paginatedProducts.map((product) => (
         <ProductsComponent
-          key={product.title}
+          key={product._id}
           imgUrl={product.imgUrl}
           title={product.title}
           description={product.description}
           sortProducts={product.sortProducts}
           country={product.country}
           button={product.button}
+          id={product._id}
         />
       ))}
 

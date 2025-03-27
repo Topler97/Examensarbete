@@ -9,6 +9,7 @@ export const ProductsComponent = ({
   sortProducts,
   country,
   button,
+  id,
 }) => {
     
 
@@ -35,7 +36,11 @@ export const ProductsComponent = ({
 
           {button && (
             <div className="flex justify-center sm:flex sm:flex-col sm:items-start sm:ml-10">
-              <Button buttonText={'Läs mer'} buttonColor={'#8B6060'} />
+              <Button 
+              buttonText={'Läs mer'} 
+              buttonColor={'#8B6060'} 
+              link={`/recipes/${id}`}
+              />
             </div>
           )}
         </div>

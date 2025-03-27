@@ -1,30 +1,28 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
 export default function ReadRecipes() {
-  const [recipes, setNews] = useState(null);
-  const router = useRouter();
+  const [recipes, setRecipes] = useState(null);
   const { id } = useParams();
   console.log("📌 ID från useParams:", id);
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      try {
-        const res = await fetch(`/api/recipes/${id}`);
-        if (!res.ok) throw new Error("Kunde inte hämta recept");
-        const data = await res.json();
-        setNews(data);
-      } catch (error) {
-        console.error("Fel vid hämtning av recept:", error);
-      }
+        try {
+            const res = await fetch(`/api/recipes/${id}`); 
+            if (!res.ok) throw new Error("Kunde inte hämta receptet");
+            const data = await res.json();
+            setRecipes(data);
+        } catch (error) {
+            console.error("Fel vid hämtning av recept:", error);
+        }
     };
 
-    if (id) fetchRecipes();
-  }, [id]);
+    if (id) fetchRecipes(); 
+}, [id]);
 
   if (!recipes) return <p>Laddar...</p>;
 
