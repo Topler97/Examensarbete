@@ -38,6 +38,9 @@ export default function Navbar() {
               <Link href="/news">Nyheter</Link>
             </li>
             <li>
+              <Link href="/recipes">Våra recept</Link>
+            </li>
+            <li>
               <Link href="/about">Om oss</Link>
             </li>
           </ul>
@@ -85,6 +88,11 @@ export default function Navbar() {
                 <li>
                   <Link href="/news" onClick={() => setIsOpen(false)}>
                     Nyheter
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/recipes" onClick={() => setIsOpen(false)}>
+                    Våra recept
                   </Link>
                 </li>
                 <li>

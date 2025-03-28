@@ -49,6 +49,11 @@ export const Footer = () => {
                 Nyheter
               </Link>
               <Link
+                href="/recipes"
+                className="mb-3">
+                Våra recept
+              </Link>
+              <Link
                 href="/about"
                 className="mb-3">
                 Om oss
