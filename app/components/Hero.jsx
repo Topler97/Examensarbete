@@ -46,7 +46,7 @@ export const Hero = () => {
         return {
           heading: 'Våra recept',
           description:
-            'Välkommen till en värld av inspiration där vi samlat de bästa drinkrecepten för alla smaker och tillfällen. Oavsett om du vill skapa en festlig stämning med en uppfriskande cocktail eller njuta av en lugn kväll med en klassisk drink, har vi recepten som hjälper dig att lyfta varje ögonblick.',
+            'Välkommen till en värld av inspiration där vi samlat de bästa drinkrecepten för alla smaker och tillfällen. Skaka, rör, njut vi har de bästa drinkarna på ett ställe!',
         };
       case '/products/Drink':
         return {

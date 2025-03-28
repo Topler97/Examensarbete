@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
-import { Hero } from '../components/Hero';
-import { News } from '../components/news/News';
+import { useEffect, useState } from "react";
+import { Hero } from "../components/Hero";
+import { News } from "../components/news/News";
 
 export default function NewsPage() {
   const [news, setNews] = useState([]);
@@ -10,12 +10,12 @@ export default function NewsPage() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await fetch('/api/news');
+        const res = await fetch("/api/news");
         const data = await res.json();
         setNews(data);
-        console.log(data)
+        console.log(data);
       } catch (error) {
-        console.error('Fel vid hämtning av nyheter:', error);
+        console.error("Fel vid hämtning av nyheter:", error);
       }
     };
 
@@ -26,24 +26,23 @@ export default function NewsPage() {
     <main>
       <Hero />
       <div>
-        <h2 className="text-[20px] font-bold text-[#333] ml-4 mt-4 pb-3 md:text-[26px] lg:ml-20 lg:my-10">
+        <h2 className="text-[20px] font-bold text-[#333] mt-4 pb-3 md:text-[26px] lg:my-10 text-center">
           Senaste nyheterna hos oss
         </h2>
 
-        <div className="grid sm:grid-cols-3 gap-6 lg:mx-15 lg:mb-5">
-            {news.length > 0 ? (
-                news.map((article) => (
-                    <News
-                        key={article._id} 
-                        imgUrl={article.imgUrl}
-                        title={article.title}
-                        _id={article._id}
-
-                    />
-                ))
-            ) : (
-                <p>Laddar nyheter...</p>
-            )}
+        <div className="grid sm:grid-cols-3 gap-6 lg:mx-15 lg:mb-5 auto-rows-fr">
+          {news.length > 0 ? (
+            news.map((article) => (
+              <News
+                key={article._id}
+                imgUrl={article.imgUrl}
+                title={article.title}
+                _id={article._id}
+              />
+            ))
+          ) : (
+            <p>Laddar nyheter...</p>
+          )}
         </div>
       </div>
     </main>

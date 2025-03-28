@@ -26,7 +26,7 @@ export default function RecipesPage() {
       <Hero />
       <div>
         <h2 className="text-[20px] font-bold text-[#333] pb-3 md:text-[26px] lg:ml-20 lg:my-10">
-        Upptäck din nästa favoritdrink – enkel, god och inspirerande!
+        Upptäck din nästa favoritdrink!
         </h2>
 
         <div>

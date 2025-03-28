@@ -8,19 +8,19 @@ export const News = ({ imgUrl, title, _id}) => {
 
     return (
         <section>
-            <div className="bg-white shadow-md rounded-lg p-4">
+            <div className="bg-white shadow-md rounded-lg p-4 h-full flex flex-col min-h-[350px]">
                 
-                <div className="w-full h-[300px] overflow-hidden rounded-lg">
+                <div className="w-full h-[250px] overflow-hidden rounded-lg">
                     <Image 
                         src={imgUrl || "/default-image.jpg"}
                         alt={title}
-                        width={200}
-                        height={200}
+                        width={250}
+                        height={250}
                         className="w-full h-full object-cover"
                     />
                 </div>
                 
-                <h2 className="text-lg py-3">{title}</h2>
+                <h2 className="text-lg py-3 flex-grow">{title}</h2>
 
                 <Button 
                     buttonText={'Läs mer'}
