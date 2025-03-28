@@ -52,13 +52,13 @@ export const Hero = () => {
         return {
           heading: 'Våra drinkar',
           description:
-            'Välkommen till vår drinksektion, där du hittar ett varierat utbud av både klassiska och nyskapande drinkar. Oavsett om du är på jakt efter en fräsch sommar-cocktail, en festlig drink för den stora tillställningen eller något unikt att imponera på vännerna med, har vi något för alla smaker.',
+            'Välkommen till vår drinksektion, där du hittar ett varierat utbud av både klassiska och nyskapande drinkar. Oavsett om du är på jakt efter en fräsch sommar-cocktail, en festlig drink för den stora tillställningen eller något unikt att imponera på vännerna med.',
         };
       case '/products/Vin':
         return {
           heading: 'Vårt vin-sortiment',
           description:
-            'Välkommen till vårt noggrant utvalda sortiment av viner. Från eleganta röda viner till friska vita och bubblande mousserande viner, erbjuder vi något för alla smaker och tillfällen. Oavsett om du är en vinentusiast eller nybörjare, kommer vårt breda urval av viner från världens bästa vinregioner att ge dig en smakupplevelse utöver det vanliga.',
+            'Välkommen till vårt noggrant utvalda sortiment av viner. Från eleganta röda viner till friska vita och bubblande mousserande viner, erbjuder vi något för alla smaker och tillfällen.',
         };
         case '/products/Öl':
         return {
@@ -76,7 +76,7 @@ export const Hero = () => {
         return {
           heading: 'Vårt cider-sortiment',
           description:
-            'Vårt cider-sortiment erbjuder en fräsch och sprudlande upplevelse för alla som älskar en läskande och fruktig dryck. Här hittar du både klassiska äppelciders och mer innovativa smakkombinationer som ger en ny twist på den traditionella drycken. ',
+            'Vårt cider-sortiment erbjuder en fräsch och sprudlande upplevelse för alla som älskar en läskande och fruktig dryck. Här hittar du både klassiska äppelciders och mer innovativa smakkombinationer som ger en ny twist. ',
         };
         case '/products/Alkoholfritt':
         return {
