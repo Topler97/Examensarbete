@@ -40,7 +40,7 @@ export const Hero = () => {
         return {
           heading: 'Alla produkter',
           description:
-            'Upptäck en värld av smaker med våra noggrant utvalda spritsorter och inspirerande drinkrecept. Oavsett om du är en erfaren bartender eller en nybörjare i drinkmixandets konst, har vi allt du behöver för att skapa minnesvärda stunder. Från klassiska favoriter till unika kreationer - här finns något för alla smaker och tillfällen.',
+            'Upptäck en värld av smaker med våra noggrant utvalda spritsorter och inspirerande drinkrecept. Oavsett om du är en erfaren bartender eller en nybörjare i drinkmixandets konst, har vi allt du behöver för att skapa minnesvärda stunder.',
         };
       case '/recipes':
         return {
