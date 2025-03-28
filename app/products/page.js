@@ -10,13 +10,11 @@ export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 5; // Antal produkter per sida
+  const pageSize = 5;
   const router = useRouter();
 
-  // För att säkerställa att router.query fungerar på klientsidan
   const { category } = router.query || {};
 
-  // Hämta alla produkter från API
   useEffect(() => {
     const fetchProducts = async () => {
       let url = "/api/products";
@@ -31,26 +29,23 @@ export default function ProductsPage() {
     fetchProducts();
   }, [category]);
 
-  // Funktion som hanterar kategori-selektion
   const handleSelectCategory = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
     router.push(`/products/${category}`);
   };
 
-  // Filtrera produkter baserat på kategori (om en kategori är vald)
   const filteredProducts = category
     ? products.filter((product) => product.category === category)
     : products;
 
-  // Beräkna pagineringens start och slutindex
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
   const changePage = (newPage) => {
     setCurrentPage(newPage);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Scrolla uppåt vid sidbyte
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

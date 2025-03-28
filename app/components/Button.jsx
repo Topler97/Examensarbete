@@ -6,9 +6,9 @@ export const Button = ({ buttonText, onClick, buttonColor, link }) => {
 
     const handleClick = () => {
         if (link) {
-            router.push(link); // Använd Next.js routing istället för window.location.href
+            router.push(link); 
         } else if (typeof onClick === "function") {
-            onClick(); // Kontrollera om onClick är en funktion innan du anropar den
+            onClick(); 
         }
     };
 
