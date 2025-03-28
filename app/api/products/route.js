@@ -12,10 +12,8 @@ export async function GET(req) {
   let products;
 
   if (category) {
-    // Om kategori finns, filtrera produkterna baserat på kategorin
     products = await ProductSchema.find({ category: category });
   } else {
-    // Om ingen kategori anges, hämta alla produkter
     products = await ProductSchema.find();
   }
 

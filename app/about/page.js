@@ -4,7 +4,6 @@ import ContactForm from "../components/contactform/contactform";
 import { Hero } from "../components/Hero";
 import { ImageBoxTextBtn } from "../components/ImageBoxTextBtn";
 
-
 export default function AboutPage() {
     return(
         <main>

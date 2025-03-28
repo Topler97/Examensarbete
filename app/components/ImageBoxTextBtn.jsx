@@ -4,9 +4,8 @@ import { Button } from './Button';
 import { usePathname } from "next/navigation";
 
 export const ImageBoxTextBtn = () => {
-    const pathname = usePathname(); // Hämta den aktuella sökvägen
+    const pathname = usePathname();
 
-    // Kolla om vi är på /about-sidan
     const isAboutPage = pathname === '/about';
 
     return(

@@ -6,9 +6,7 @@ import { Button } from '../Button';
 export const Recipes = ({ 
   _id, 
   imgUrl, 
-  title, 
-  instructions, 
-  ingredients 
+  title
 }) => {
   const router = useRouter();
 

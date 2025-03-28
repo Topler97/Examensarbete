@@ -12,7 +12,6 @@ export default function RecipesPage() {
         const res = await fetch('/api/recipes');
         const data = await res.json();
         setRecipes(data);
-        console.log(data);
       } catch (error) {
         console.error('Fel vid hämtning av recept:', error);
       }

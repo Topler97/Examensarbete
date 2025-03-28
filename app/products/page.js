@@ -72,10 +72,10 @@ export default function ProductsPage() {
           imgUrl={product.imgUrl}
           title={product.title}
           description={product.description}
-          sortProducts={product.sortProducts}
+          sortProducts={product.sort}
           country={product.country}
           button={product.button}
-          id={product._id}
+          _id={product._id}
         />
       ))}
 
