@@ -39,7 +39,7 @@ export default function TopList() {
                     imgUrl={product.imgUrl}
                     title={product.title}
                     description={product.description}
-                    sort={product.sortProducts}
+                    sortProducts={product.sortProducts}
                     country={product.country}
                     button={product.button}
                 />

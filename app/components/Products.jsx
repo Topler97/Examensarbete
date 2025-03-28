@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { Button } from './Button';
 
 export const ProductsComponent = ({
   imgUrl,
@@ -8,10 +7,7 @@ export const ProductsComponent = ({
   description,
   sortProducts,
   country,
-  button,
-  id,
 }) => {
-    
 
   return (
     <section className="my-20 lg:flex lg:items-center lg:flex-col">
@@ -33,16 +29,6 @@ export const ProductsComponent = ({
             <p className="text-[#8B6060] pt-5 sm:p-0">{sortProducts}</p>
             <p className="text-[#8B6060] pb-8 sm:p-0">{country}</p>
           </div>
-
-          {button && (
-            <div className="flex justify-center sm:flex sm:flex-col sm:items-start sm:ml-10">
-              <Button 
-              buttonText={'Läs mer'} 
-              buttonColor={'#8B6060'} 
-              link={`/recipes/${id}`}
-              />
-            </div>
-          )}
         </div>
       </div>
     </section>

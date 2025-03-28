@@ -13,11 +13,9 @@ export async function GET(req, { params }) {
         { status: 404 }
       );
     }
-
-    console.log("✅ Hittad recept:", recipes);
     return NextResponse.json(recipes, { status: 200 });
   } catch (error) {
-    console.error("❌ Fel vid hämtning av recept:", error);
+    console.error("Fel vid hämtning av recept:", error);
     return NextResponse.json({ error: "Serverfel" }, { status: 500 });
   }
 }

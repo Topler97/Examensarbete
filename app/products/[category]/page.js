@@ -15,12 +15,10 @@ export default function CategoryPage() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Kontrollera om vi är på klientsidan
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  // Hämta kategori från sökvägen
   useEffect(() => {
     if (isClient) {
       const categoryFromUrl = pathname.split('/').pop(); // Tar den sista delen av URL:en som kategori
@@ -28,7 +26,6 @@ export default function CategoryPage() {
     }
   }, [pathname, isClient]);
 
-  // Hämta produkter baserat på kategori när den finns
   useEffect(() => {
     if (category) {
       const fetchProducts = async () => {
